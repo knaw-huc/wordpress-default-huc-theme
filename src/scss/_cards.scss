@@ -1,0 +1,57 @@
+.card-grid, .card-grid-inline {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 -1em;
+}
+
+.card {
+  background-color: $colorGreyLight;
+  padding: 1rem;
+  width: 100%;
+  margin: 0 0 #{$basicPadding} 0em;
+  display: flex;
+  flex-direction: column;
+  border-radius: $radius;
+  justify-content: space-between;
+}
+
+@media (min-width: 800px) {
+  .card-grid, .card-grid-inline {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+
+  .card-grid .card {
+    width: calc(33% - #{($basicPadding * 2)/3});
+    margin: 0 #{$basicPadding} #{$basicPadding} 0;
+  }
+  .card-grid .card:nth-child(3n+3) {
+    width: calc(33% - #{($basicPadding * 2)/3});
+    margin: 0 0 #{$basicPadding} 0;
+  }
+
+
+  .card-grid-inline .card {
+    width: calc(50% - #{($basicPadding * 1)/2});
+    margin: 0 #{$basicPadding} #{$basicPadding} 0;
+  }
+  .card-grid-inline .card:nth-child(2n+2) {
+    width: calc(50% - #{($basicPadding * 1)/2});
+    margin: 0 0 #{$basicPadding} 0;
+  }
+}
+
+.card-color {
+  padding: 3em 1.5em 1.5em;
+  background-image: -moz-linear-gradient( 115deg, #91e6c2 5%, #{lighten($colorSecundairy, 10)} 100%);
+  background-image: -webkit-linear-gradient( 115deg, #91e6c2 5%, #{lighten($colorSecundairy, 10)} 100%);
+  background-image: -ms-linear-gradient( 115deg, #91e6c2 5%, #{lighten($colorSecundairy, 10)} 100%);
+}
+
+.instIcon {
+  width: auto;
+  height: 40px;
+  margin: .5rem 0 0 0;
+}

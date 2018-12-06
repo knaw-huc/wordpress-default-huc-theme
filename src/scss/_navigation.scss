@@ -1,0 +1,43 @@
+
+.pop-navigation {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 1.5em;
+  background-color: #f1f1f1;
+  font-size: 1.3rem;
+  line-height: 160%;
+  display: none;
+}
+
+.pop-navigation .huc-logo {
+
+}
+
+.pop-navigation li {
+  list-style: none;
+  margin: 0 0 0 0;
+}
+
+.pop-navigation-top {
+  margin: 1rem 0 2em 0;
+}
+
+.pop-navigation-top a{
+  color: $colorTxt;
+  font-weight: 700;
+  margin: 0 0 1em 0;
+
+}
+.pop-navigation-sub a{
+  margin: 0 0 1em 0;
+  color: $colorGreyMid;
+}
+
+.wrppr {
+  overflow-x: scroll;
+  height: 100vh;
+  width: 260px;
+}

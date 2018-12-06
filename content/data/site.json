@@ -1,0 +1,9 @@
+{
+  "pages": [
+    {
+      "name": "index",
+      "template": "basic",
+      "title": "A page"
+    }
+  ]
+}
