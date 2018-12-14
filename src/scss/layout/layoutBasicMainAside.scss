@@ -1,0 +1,9 @@
+.layoutBasicMainAside {
+  display: flex;
+  flex-direction: column;
+}
+
+.layoutBasicMainAside >*{
+  width: 100%;
+  //padding-left: 1rem;
+}
