@@ -4,6 +4,11 @@
       "name": "index",
       "template": "basic",
       "title": "A page"
+    },
+    {
+      "name": "css",
+      "template": "css-util",
+      "title": " HuC Utility CSS"
     }
   ]
 }

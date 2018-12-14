@@ -16,9 +16,10 @@ var browserSync = require('browser-sync').create();
 var reload      = browserSync.reload;
 const using = require('gulp-using');
 const get = require('simple-get');
+const markdown = require('gulp-markdown');
 
 var options = {
-    batch : ['./src/components/']
+    batch : ['./src/components/', './content/html/']
     }
 
 
@@ -29,7 +30,8 @@ var fHtml=      'src/**/*.html';
 var fImages=    'src/images/**/*';
 var fJs=        'src/js/**/*';
 var fJson=      ['src/**/*.json', 'content/**/*.json'];
-var fMd=         'content/**/*.md';
+var fMd=        'content/**/*.md';
+var cssUtil=    'src/css-util/**/*';
 
 var siteJson = require('./content/data/site.json');
 
@@ -56,6 +58,12 @@ gulp.task('clean', function () {
         .pipe(clean())
 });
 
+
+gulp.task('md', function() {
+  return gulp.src(cssUtil)
+    .pipe(markdown())
+    .pipe(gulp.dest('content/html/'));
+});
 
 
 
@@ -89,6 +97,7 @@ gulp.task('buildFromTemplates', function(done) {
 
       gulp.src('./src/templates/'+template+'.html')
           .pipe(plumber())
+
           .pipe(handlebars(page, options))
           .pipe(rename(fileName + ".html"))
           .pipe(useref())
@@ -113,7 +122,7 @@ gulp.task('copyFiles', function(done) {
 
 
 gulp.task('build',
-  gulp.series('clean', 'sass', 'buildFromTemplates', 'copyFiles',
+  gulp.series('clean', 'md', 'sass', 'buildFromTemplates', 'copyFiles',
   function(done) {
       done();
   }
@@ -121,7 +130,7 @@ gulp.task('build',
 
 
 gulp.task('watch', function () {
-  gulp.watch([fHtml, fScss, fJs], gulp.series('build'));
+  gulp.watch([fHtml, fScss, fJs, cssUtil], gulp.series('build'));
 });
 
 
