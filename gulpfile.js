@@ -82,7 +82,7 @@ gulp.task('nav', function(done) {
 gulp.task('sass', function(){
   return gulp.src('./src/scss/*')
     .pipe(plumber())
-    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(sass()) //{outputStyle: 'compressed'}
     .pipe(gulp.dest(dst+'css'))
 });
 
