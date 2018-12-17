@@ -1,0 +1,29 @@
+// Colors
+$colorPrimairy: #03dbe8;
+$colorSecundairy:#ddf279;     //#fff568;
+$colorTertiary: #56504b;
+$colorLink: #0087d4;
+
+$colorGreyLight: #fafafa;
+$colorGreyMid: #999999;
+$colorGreyDark: #3e3e3e;
+$colorTxt: #3e3e3e;
+$colorWhite: #fff;
+
+
+// Grey
+$greyLight: rgb(246, 246, 246);
+$greyheavy: rgb(246, 246, 246);
+
+body {
+	background-color: $colorWhite;
+	color: $colorTxt;
+}
+
+a {
+	color: $colorLink;
+}
+
+.colorBgGrey {
+  background-color: $greyLight;
+}

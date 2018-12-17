@@ -16,22 +16,94 @@
     <meta property="og:image"         content="" />
   </head>
   <body>
+<link rel="stylesheet" href="css/utilcss.css">
+<div class="site layoutBasicMainFixedAside">
+  <aside class="layoutAside basicSideMargin colorBgGrey blockScroll">
 
-<div class="site layoutBasicMainAside">
-  <aside id="headerNavigation" class="basicSideMargin verticalList">
+    <div class="headSpace">
+      <div class="brandName">
+        <img src="images/logo-knaw-humanities-cluster.png" alt="logo KNAW Humanities Cluster">
+        <div>Utility CSS</div>
+      </div>
+    </div>
+
+    <nav id="navigationFromHeaders" class="navigation verticalList"></nav>
 
   </aside>
-  <main class="basicSideMargin">
-    <h1 id="huc-utility-css">Huc Utility CSS</h1>
-    <h2 id="introduction">Introduction</h2>
-    <p>This framework is build for developers of the HuC Digital Infrastructure Teams.</p>
-    <h2 id="alignments-en-directions">Alignments en directions</h2>
-    <h3 id="verticallist">VerticalList</h3>
-    <p>To keep (namely) text and other content readable a margin is a great help.<br><code>.verticalList</code></p>
-    <h2 id="margins-and-paddings">Margins and paddings</h2>
-    <h3 id="basicsidemargin">basicSideMargin</h3>
-    <p>To keep (namely) text and other content readable a margin is a great help.<br><code>.basicSideMargin</code></p>
-  </main>
+  <div class="layoutMain blockCenter basicSideMargin">
+    <div class="headSpace blockText">
+      <div class="blockText"><h1>HuC Utility CSS</h1></div>
+    </div>
+
+    <article class="blockText">
+    <div class="utillBlock">
+      <h2 id="introduction">Introduction</h2>
+      <p>This framework is build for developers of the HuC Digital Infrastructure Teams.</p>
+      <h2 id="core">Core</h2>
+      <p>Add the following to the <code>&lt;head&gt;</code> of your HTML page:
+      <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://util-css.huc.knaw.nl/style.css&quot;&gt;</code>.
+      With this stylesheet the site will use basic Roboto font in 16 pixels.</p>
+      <ul>
+      <li>Normalise</li>
+      <li>Roboto font 16px</li>
+      <li>White background</li>
+      </ul>
+    </div>
+    <div class="utillBlock">
+      <h2 id="basic-interface-utilities">Basic interface utilities</h2>
+      <p>These utilities will give your site hierarchy, clarity and focus.</p>
+      <h3 id="blocks-size">Blocks size</h3>
+      <h4 id="site-block">Site block</h4>
+      <p>A site block is a block container that prevents the content to spread all over the screen. It give content a maximum with of 1200 pixels.</p>
+      <p><em>Example</em></p>
+      <pre><code>&lt;header class=&quot;blockSite&quot;&gt;Site name&lt;/header&gt;</code></pre><h4 id="text-block">Text block</h4>
+      <h3 id="margins">Margins</h3>
+      <h4 id="basic-site-margin">Basic site margin</h4>
+      <p>To keep (namely) text and other content readable a margin is a great help.<br><code>.basicSideMargin</code></p>
+      <h3 id="alignments">Alignments</h3>
+      <h3 id="headers">Headers</h3>
+      <h3 id="labels">Labels</h3>
+    </div>
+    <div class="utillBlock">
+      <h2 id="text">Text</h2>
+      <h3 id="interface-text">Interface text</h3>
+      <h3 id="large-text">Large text</h3>
+    </div>
+    <div class="utillBlock">
+      <h2 id="display-multiple-items">Display multiple items</h2>
+      <p>In this section you&#39;ll find some utilities to organise multiple items. For example: list items, result items and cards.</p>
+      <h3 id="list">List</h3>
+      <p>To keep (namely) text and other content readable a margin is a great help.<br><code>.basicSideMargin</code></p>
+      <h3 id="results-list">Results list</h3>
+      <h3 id="cards">Cards</h3>
+      <h3 id="row">Row</h3>
+    </div>
+    <div class="utillBlock">
+      <h2 id="interaction">Interaction</h2>
+      <h3 id="buttons">Buttons</h3>
+    </div>
+    <div class="utillBlock">
+      <h2 id="functional-elements">Functional Elements</h2>
+      <h3 id="aside-panel">Aside panel</h3>
+      <p><code>AsidePanel</code></p>
+      <ul>
+      <li>Navigation</li>
+      </ul>
+    </div>
+    <div class="utillBlock">
+      <h2 id="layouts">Layouts</h2>
+      <h3 id="basic-content-with-sidebar-layout">Basic content with sidebar layout</h3>
+      <h3 id="faceted-search-layout">Faceted search layout</h3>
+    </div>
+    <div class="utillBlock">
+      <h2 id="forms">Forms</h2>
+      <h3 id="form-stack">Form stack</h3>
+      <h3 id="data-fields">Data fields</h3>
+    </div>
+
+
+    </article>
+  </div>
 
   <script src="js/util.js"></script>
   <!-- <script src="js/navigation.js" charset="utf-8"></script>

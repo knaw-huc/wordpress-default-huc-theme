@@ -1,14 +1,36 @@
 {{> html-head}}
+<link rel="stylesheet" href="css/utilcss.css">
+<div class="site layoutBasicMainFixedAside">
+  <aside class="layoutAside basicSideMargin colorBgGrey blockScroll">
 
-<div class="site layoutBasicMainAside">
-  <aside id="headerNavigation" class="basicSideMargin verticalList">
+    <div class="headSpace">
+      <div class="brandName">
+        <img src="images/logo-knaw-humanities-cluster.png" alt="logo KNAW Humanities Cluster">
+        <div>Utility CSS</div>
+      </div>
+    </div>
+
+    <nav id="navigationFromHeaders" class="navigation verticalList"></nav>
 
   </aside>
-  <main class="basicSideMargin">
-    {{> introduction}}
-    {{> aligments}}
-    {{> margin}}
-  </main>
+  <div class="layoutMain blockCenter basicSideMargin">
+    <div class="headSpace blockText">
+      <div class="blockText"><h1>HuC Utility CSS</h1></div>
+    </div>
+
+    <article class="blockText">
+    {{> cssUtil-block            file="introduction"}}
+    {{> cssUtil-block            file="basicUtilities"}}
+    {{> cssUtil-block            file="text"}}
+    {{> cssUtil-block            file="multipleItems"}}
+    {{> cssUtil-block            file="interaction"}}
+    {{> cssUtil-block            file="functionalElements"}}
+    {{> cssUtil-block            file="layouts"}}
+    {{> cssUtil-block            file="forms"}}
+
+
+    </article>
+  </div>
 
   <!-- build:js js/util.js -->
       <script type="text/javascript" src="../js/headers-to-subnavigation.js"></script>

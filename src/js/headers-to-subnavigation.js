@@ -1,11 +1,16 @@
 // get all headers 2 and 3.
-var elems = document.querySelectorAll('h2,h3');
+var destination = 'navigationFromHeaders';
+var elementTags = 'h2,h3';
+
+
+var elems = document.querySelectorAll(elementTags);
 console.log(elems);
 
-// adb anchor link to each header
+// add anchor link to each header
 for (var i = 0; i < elems.length; i++) {
     var hId = elems[i].getAttribute( 'id' );
     document.body.innerHTML = document.body.innerHTML.replace('<h2 id="'+hId, '<a id="l'+hId+'"></a><h2 id="'+hId);
+    document.body.innerHTML = document.body.innerHTML.replace('<h3 id="'+hId, '<a id="l'+hId+'"></a><h3 id="'+hId);
 }
 
 
@@ -20,10 +25,10 @@ for (var i = 0; i < elems.length; i++) {
 
     // distinct subnav
     if (hTag == 'H3') {
-      linkClass= 'subNav';
+      linkClass= 'sub';
     }
 
     headerNavigation = headerNavigation+'<a href="#l'+hId+'" class="'+linkClass+'">'+hTxt+'</a>';
 }
 
-document.getElementById("headerNavigation").innerHTML = headerNavigation;
+document.getElementById(destination).innerHTML = headerNavigation;

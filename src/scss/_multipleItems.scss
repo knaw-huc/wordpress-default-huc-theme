@@ -1,0 +1,10 @@
+// Multiple Items
+
+.verticalList {
+  display: flex;
+  flex-direction: column;
+
+}
+.verticalList > *{
+  //margin-bottom: .5rem;
+}

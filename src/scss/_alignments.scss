@@ -1,6 +1,20 @@
 // Alignments and directions
 
-.verticalList {
+.blockCenter {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.fullHeight {
+  min-height: 100vh;
+}
+
+
+.headSpace {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }

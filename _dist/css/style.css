@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,700");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,300i,700");
 html,
 body {
   padding: 0;
@@ -9,7 +11,7 @@ ul, ol {
 
 li {
   padding: 0;
-  margin: 0 0 0 0; }
+  margin: 0 0 0 1.2rem; }
 
 a {
   text-decoration: none; }
@@ -19,14 +21,6 @@ ul ul {
 
 ul ul ul {
   margin: 0 0 0 2em; }
-
-.basicSideMargin {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem; }
-
-.verticalList {
-  display: flex;
-  flex-direction: column; }
 
 .site {
   width: 100vw;
@@ -48,25 +42,148 @@ ul ul ul {
   justify-content: space-between;
   width: 100%; }
 
-.subNav {
-  font-size: .8rem; }
+body {
+  background-color: #fff;
+  color: #3e3e3e; }
 
-.layoutBasicMainAside {
+a {
+  color: #0087d4; }
+
+.colorBgGrey {
+  background-color: #f6f6f6; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+  font-style: normal;
+  color: #3e3e3e; }
+
+h1 {
+  font-size: 1.5em;
+  line-height: 130%;
+  font-weight: 700; }
+
+h2 {
+  font-size: 1.3em;
+  line-height: 130%;
+  font-weight: 700; }
+
+h3 {
+  font-size: 1em;
+  line-height: 130%;
+  font-weight: 700; }
+
+h4 {
+  font-size: 1em;
+  line-height: 130%;
+  font-weight: 300;
+  font-style: italic; }
+
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+    line-height: 150%; }
+  h1 {
+    font-size: 2em; }
+  h1, h2, h3, h4 {
+    line-height: 150%; } }
+
+h1, h2, h3, h4 {
+  margin-top: 0;
+  margin-bottom: .3em; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em; }
+
+strong {
+  font-weight: 700; }
+
+.basicSideMargin {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
+
+.blockCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.fullHeight {
+  min-height: 100vh; }
+
+.headSpace {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; }
+
+.blockText {
+  max-width: 650px;
+  width: 100%; }
+
+.blockSite {
+  max-width: 1200px;
+  width: 100%; }
+
+.blockScroll {
+  min-height: 100vh;
+  overflow-y: auto; }
+
+.blockScroll:hover {
+  overflow-y: scroll; }
+
+.verticalList {
   display: flex;
   flex-direction: column; }
 
-aside {
+.navigation a {
+  color: #3e3e3e;
+  font-weight: 700;
+  font-size: 14px; }
+
+.navigation .sub {
+  font-weight: 300; }
+
+.layoutBasicMainAside, .layoutBasicMainFixedAside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+
+.layoutAside {
   width: 100%; }
 
-main {
+.layoutMain {
   width: 100%; }
 
 @media (min-width: 800px) {
   .layoutBasicMainAside {
     flex-direction: row; }
-  aside {
-    width: 250px;
-    background-color: #cee9bb; }
-  main {
+  .layoutAside {
+    width: 250px; }
+  .layoutMain {
     width: calc(100vw - 250px);
-    background-color: #cee9bb; } }
+    min-width: calc(800px - 250px); } }
+
+@media (min-width: 800px) {
+  .layoutBasicMainFixedAside {
+    flex-direction: row;
+    justify-content: flex-end; }
+    .layoutBasicMainFixedAside .layoutAside {
+      width: 250px;
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      bottom: 0; }
+    .layoutBasicMainFixedAside .layoutMain {
+      width: calc(100vw - 250px);
+      margin-left: 250px; } }
+
+.brandName {
+  font-weight: 700; }
+
+.brandName img {
+  height: 50px;
+  width: auto !important; }

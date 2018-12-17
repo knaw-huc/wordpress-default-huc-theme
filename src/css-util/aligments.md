@@ -1,5 +1,8 @@
-## Alignments en directions
+## Alignments, justify and directions
 
-### VerticalList
-To keep (namely) text and other content readable a margin is a great help.   
+### A vertical list
+The items will be placed underneath each other.   
 `.verticalList`
+
+### Full height
+`.fullHeight`

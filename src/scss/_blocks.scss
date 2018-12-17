@@ -1,0 +1,22 @@
+// Blocks
+
+.blockText {
+  max-width: 650px;
+  width: 100%;
+}
+
+.blockSite {
+  max-width: 1200px;
+  width: 100%;
+}
+
+
+//
+.blockScroll {
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.blockScroll:hover {
+  overflow-y: scroll;
+}

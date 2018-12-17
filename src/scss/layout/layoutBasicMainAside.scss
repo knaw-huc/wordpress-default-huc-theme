@@ -1,34 +1,55 @@
 $asideWith: 250px;
 
-.layoutBasicMainAside {
+.layoutBasicMainAside, .layoutBasicMainFixedAside {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
-
-aside {
+.layoutAside {
   width: 100%;
 }
 
-main {
+.layoutMain {
   width: 100%;
 }
-
-
 
 @media (min-width: 800px) {
   .layoutBasicMainAside {
     flex-direction: row;
   }
 
-
-  aside {
+  .layoutAside {
     width: $asideWith;
-    background-color: #cee9bb;
   }
 
-  main {
+  .layoutMain {
     width: calc(100vw - #{$asideWith});
-    background-color: #cee9bb;
+    min-width: calc(800px - #{$asideWith});
   }
+}
+
+//////////////////
+
+@media (min-width: 800px) {
+  .layoutBasicMainFixedAside {
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .layoutAside {
+      width: $asideWith;
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      bottom: 0;
+    }
+
+    .layoutMain {
+      width: calc(100vw - #{$asideWith});
+      margin-left: $asideWith;
+    }
+
+  }
+
+
 }
