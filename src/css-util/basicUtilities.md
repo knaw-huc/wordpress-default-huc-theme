@@ -12,10 +12,21 @@ _Example_
 #### Text block
 
 ### Margins
-#### Basic site margin
+#### Basic left and right margin
 To keep (namely) text and other content readable a margin is a great help.   
 `.basicSideMargin`
 
+#### Header margin
+
 ### Alignments
+`.alignHorizontal` 
+
+`.alignVertical` 
+
+`.alignLeft` 
+
+`.alignRight`
+
+`.alignCenter`
 ### Headers
 ### Labels

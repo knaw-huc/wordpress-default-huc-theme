@@ -1,5 +1,30 @@
 // Alignments and directions
 
+.alignHorizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.alignVertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.alignLeft {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.alignRight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.alignCenter {
+  display: flex;
+  justify-content: center;
+}
+
 .blockCenter {
   display: flex;
   flex-direction: column;
@@ -14,7 +39,7 @@
 .headSpace {
   height: 30vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }

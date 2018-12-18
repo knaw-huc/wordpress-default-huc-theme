@@ -105,6 +105,26 @@ strong {
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
 
+.alignHorizontal {
+  display: flex;
+  flex-direction: row; }
+
+.alignVertical {
+  display: flex;
+  flex-direction: column; }
+
+.alignLeft {
+  display: flex;
+  justify-content: flex-start; }
+
+.alignRight {
+  display: flex;
+  justify-content: flex-end; }
+
+.alignCenter {
+  display: flex;
+  justify-content: center; }
+
 .blockCenter {
   display: flex;
   flex-direction: column;
@@ -116,9 +136,9 @@ strong {
 .headSpace {
   height: 30vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; }
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
 
 .blockText {
   max-width: 650px;
@@ -135,17 +155,18 @@ strong {
 .blockScroll:hover {
   overflow-y: scroll; }
 
-.verticalList {
-  display: flex;
-  flex-direction: column; }
-
 .navigation a {
   color: #3e3e3e;
   font-weight: 700;
-  font-size: 14px; }
+  font-size: 14px;
+  padding: .2rem;
+  margin-right: .5rem; }
 
 .navigation .sub {
   font-weight: 300; }
+
+.navigation li {
+  list-style: none; }
 
 .layoutBasicMainAside, .layoutBasicMainFixedAside {
   display: flex;
