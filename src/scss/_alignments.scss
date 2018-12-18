@@ -20,9 +20,23 @@
   justify-content: flex-end;
 }
 
+.alignVertical.alignRight {
+  display: flex;
+  align-items: flex-end;
+}
+
+
 .alignCenter {
   display: flex;
   justify-content: center;
+}
+
+
+
+
+.alignVertical.alignCenter {
+  display: flex;
+  align-items: center;
 }
 
 .blockCenter {
