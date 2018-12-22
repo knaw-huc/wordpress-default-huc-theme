@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="352" viewBox="0 0 640 352">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f9d567;
+      }
+
+      .cls-2 {
+        fill: #66abcf;
+      }
+    </style>
+  </defs>
+  <g id="cols-aside-big.svg">
+    <rect id="bg" class="cls-1" width="640" height="480"/>
+    <rect class="cls-2" x="29" y="26.563" width="280" height="237.438"/>
+    <rect class="cls-2" x="335" y="26" width="280" height="237.438"/>
+  </g>
+</svg>

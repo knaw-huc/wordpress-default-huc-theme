@@ -28,6 +28,7 @@ var prebuild =  'react/';
 var fScss=      'src/scss/**/*.scss';
 var fHtml=      'src/**/*.html';
 var fImages=    'src/images/**/*';
+var fAssets=    'src/util-images-assets/**/*';
 var fJs=        'src/js/**/*';
 var fJson=      ['src/**/*.json', 'content/**/*.json'];
 var fMd=        'content/**/*.md';
@@ -109,10 +110,11 @@ gulp.task('buildFromTemplates', function(done) {
 
 
 gulp.task('copyFiles', function(done) {
-  return gulp.src(fImages)
-    .pipe(gulp.dest(dst+'images'))
+  return gulp.src([fAssets, fImages])
+      .pipe(gulp.dest(dst+'images'))
+      
 
-    return gulp.src(fJs)
+  return gulp.src(fJs)
       .pipe(gulp.dest(dst+'js'))
   done();
 });
@@ -130,7 +132,7 @@ gulp.task('build',
 
 
 gulp.task('watch', function () {
-  gulp.watch([fHtml, fScss, fJs, cssUtil], gulp.series('build'));
+  gulp.watch([fHtml, fScss, fJs, cssUtil, fAssets], gulp.series('build'));
 });
 
 

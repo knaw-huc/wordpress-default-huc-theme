@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300');
 
 h2 {
@@ -21,5 +20,8 @@ code {
 }
 
 .utillBlock {
-  min-height: 90vh;
+  //min-height: 90vh;
+  border-bottom: 1px solid #ede8e8;
+  padding: 0 0 5em 0;
+  margin: 0 0 5em 0;
 }
