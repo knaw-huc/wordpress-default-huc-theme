@@ -9,6 +9,16 @@
       "name": "css",
       "template": "css-util",
       "title": " HuC Utility CSS"
+    },
+    {
+      "name": "wp-monarchy-text",
+      "template": "wp-basic-text",
+      "title": " Monarchy in Turmoil"
+    },
+    {
+      "name": "wp-monarchy-text",
+      "template": "wp-basic-text",
+      "title": " Monarchy in Turmoil"
     }
   ]
 }
