@@ -22,7 +22,6 @@ var options = {
     batch : ['./src/components/', './content/html/']
     }
 
-
 var dst =       '_dist/';
 var prebuild =  'react/';
 var fScss=      'src/scss/**/*.scss';
@@ -112,7 +111,7 @@ gulp.task('buildFromTemplates', function(done) {
 gulp.task('copyFiles', function(done) {
   return gulp.src([fAssets, fImages])
       .pipe(gulp.dest(dst+'images'))
-      
+
 
   return gulp.src(fJs)
       .pipe(gulp.dest(dst+'js'))
