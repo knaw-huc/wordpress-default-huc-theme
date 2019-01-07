@@ -2,17 +2,24 @@
   <defs>
     <style>
       .cls-1 {
-        fill: #f9d567;
+        fill: #f6f5f1;
       }
 
       .cls-2 {
-        fill: #66abcf;
+        fill: #e9dfae;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #aed2d1;
+        stroke-width: 4px;
       }
     </style>
   </defs>
   <g id="cols-aside-big.svg">
-    <rect id="bg" class="cls-1" width="640" height="480"/>
-    <rect class="cls-2" x="29" y="26.563" width="280" height="237.438"/>
-    <rect class="cls-2" x="335" y="26" width="280" height="237.438"/>
+    <rect id="bg" class="cls-1" width="640" height="352"/>
+    <rect id="aside" class="cls-2" x="62" y="60.813" width="117" height="232.188"/>
+    <rect id="main" class="cls-2" x="216" y="60" width="362" height="232.188"/>
+    <rect id="Container" class="cls-3" x="30" y="27" width="581" height="299"/>
   </g>
 </svg>

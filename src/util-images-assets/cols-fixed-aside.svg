@@ -16,10 +16,10 @@
       }
     </style>
   </defs>
-  <g id="cols-aside-big.svg">
+  <g id="cols-fixed-aside.svg">
     <rect id="bg" class="cls-1" width="640" height="352"/>
-    <rect id="aside" class="cls-2" x="62" y="60.813" width="117" height="232.188"/>
-    <rect id="main" class="cls-2" x="216" y="60" width="362" height="232.188"/>
+    <rect id="aside" class="cls-2" x="30" y="27" width="117" height="299"/>
+    <rect id="main" class="cls-2" x="245" y="60" width="286" height="266"/>
     <rect id="Container" class="cls-3" x="30" y="27" width="581" height="299"/>
   </g>
 </svg>
