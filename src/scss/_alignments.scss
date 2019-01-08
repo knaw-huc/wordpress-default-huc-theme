@@ -48,20 +48,3 @@
 .fullHeight {
   min-height: 100vh;
 }
-
-
-.headSpace {
-  height: 30vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-@media (min-width: 500px) {
-    .headSpace {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
-  }

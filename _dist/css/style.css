@@ -144,6 +144,27 @@ strong {
 .fullHeight {
   min-height: 100vh; }
 
+.blockText {
+  max-width: 650px;
+  width: 100%; }
+
+.blockSite {
+  max-width: 1200px;
+  width: 100%; }
+
+@media (min-width: 1300px) {
+  .blockText {
+    max-width: 750px; }
+  .blockSite {
+    max-width: 1400px; } }
+
+.blockScroll {
+  min-height: 100vh;
+  overflow-y: auto; }
+
+.blockScroll:hover {
+  overflow-y: scroll; }
+
 .headSpace {
   height: 30vh;
   display: flex;
@@ -156,21 +177,6 @@ strong {
     flex-direction: row;
     align-items: center;
     justify-content: space-between; } }
-
-.blockText {
-  max-width: 650px;
-  width: 100%; }
-
-.blockSite {
-  max-width: 1200px;
-  width: 100%; }
-
-.blockScroll {
-  min-height: 100vh;
-  overflow-y: auto; }
-
-.blockScroll:hover {
-  overflow-y: scroll; }
 
 .navigation a {
   color: #3e3e3e;

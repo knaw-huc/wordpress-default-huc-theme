@@ -10,6 +10,15 @@
   width: 100%;
 }
 
+@media (min-width: 1300px) {
+  .blockText {
+    max-width: 750px;
+  }
+
+  .blockSite {
+    max-width: 1400px;
+  }
+  }
 
 //
 .blockScroll {
@@ -20,3 +29,22 @@
 .blockScroll:hover {
   overflow-y: scroll;
 }
+
+
+//Headerspace for logo and navigation. Uses 30% of the page.
+
+.headSpace {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media (min-width: 500px) {
+    .headSpace {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
