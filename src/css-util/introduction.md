@@ -2,7 +2,7 @@
 This framework is build for developers of the HuC Digital Infrastructure Teams. It is build on these directives:
 * Unburden HuC developers with design decisions, responsive behaviour;
 * Create a default well designed webpage or tool;
-* Keep our tools consistent and recnogsise
+* Keep our tools consistent and recognizable as HuC tools.
 
 ## Core
 Add the following to the `<head>` of your HTML page:
