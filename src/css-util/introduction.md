@@ -1,5 +1,9 @@
 ## Introduction
-This framework is build for developers of the HuC Digital Infrastructure Teams.
+This framework is build for developers of the HuC Digital Infrastructure Teams. It is build on these directives:
+* Unburden HuC developers with design decisions, responsive behaviour;
+* Create a default well designed webpage or tool;
+* Keep our tools consistent and recnogsise
+
 ## Core
 Add the following to the `<head>` of your HTML page:
 `<link rel="stylesheet" href="https://util-css.huc.knaw.nl/style.css">`.
