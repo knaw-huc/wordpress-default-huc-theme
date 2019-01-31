@@ -25,25 +25,11 @@ ul ul {
 ul ul ul {
   margin: 0 0 0 2em; }
 
-.site {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
-.tempBlockPage {
-  max-width: 1100px;
-  padding: 0 1.5rem; }
-
-.tempBlockText {
-  max-width: 650px;
-  padding: 0 1.5rem; }
-
-.tempItemAlignHor {
+.hcPageHeaderSimple {
+  padding: 1rem 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 100%; }
+  justify-content: space-between; }
 
 body {
   background-color: #fff;
