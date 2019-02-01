@@ -25,14 +25,113 @@ ul ul {
 ul ul ul {
   margin: 0 0 0 2em; }
 
-.hcPageHeaderSimple {
-  padding: 1rem 0;
+nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  height: 100%;
+  align-items: center; }
+
+nav a {
+  font-weight: 700;
+  height: 100%;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center; }
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.11); }
+
+nav a:first-child {
+  margin-left: -1rem; }
+
+.hcMenuButton {
+  border: none;
+  background: none;
+  font-size: .9rem;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 2rem; }
+
+.hcMenuButton img {
+  width: .7rem;
+  height: .7rem;
+  margin-left: .5rem; }
+
+.hcPageHeaderSimple {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: .9rem;
+  height: 100px; }
+
+.hcPageHeaderSimple > * {
+  height: 100%;
+  display: flex;
+  align-items: center; }
 
 .hcSecundairNav {
   display: none; }
+
+@media (min-width: 600px) {
+  .hcPageHeaderSimple {
+    flex-direction: row; }
+  .hcSecundairNav {
+    display: flex; }
+  .hcMenuButton {
+    display: none; } }
+
+.hcBrand {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  justify-content: flex-start; }
+
+.hcBrandLogo img {
+  height: 33px;
+  width: auto; }
+
+.hcBrandName {
+  padding-left: 1rem; }
+
+@media (min-width: 600px) {
+  .hcBrandLogo img {
+    height: 60px;
+    width: auto; } }
+
+.hcFullscreenMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 1.5rem !important;
+  align-items: flex-start;
+  justify-content: flex-start; }
+  .hcFullscreenMenu nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 50vh; }
+  .hcFullscreenMenu nav a {
+    padding: 0 0rem; }
+  .hcFullscreenMenu #hcMenuButton {
+    position: fixed;
+    top: 30px;
+    right: 30px; }
+  .hcFullscreenMenu .hcSecundairNav {
+    display: flex; }
+  .hcFullscreenMenu nav a:first-child {
+    margin-left: 0rem; }
+  .hcFullscreenMenu .hcBrand {
+    margin-left: 0rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem; }
+  .hcFullscreenMenu .hcPageHeaderSimple {
+    flex-direction: column; }
 
 body {
   background-color: #fff;
