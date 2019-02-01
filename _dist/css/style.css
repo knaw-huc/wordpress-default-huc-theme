@@ -31,6 +31,9 @@ ul ul ul {
   flex-direction: row;
   justify-content: space-between; }
 
+.hcSecundairNav {
+  display: none; }
+
 body {
   background-color: #fff;
   color: #3e3e3e; }

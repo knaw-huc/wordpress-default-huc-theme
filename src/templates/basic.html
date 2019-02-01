@@ -2,27 +2,29 @@
 <link rel="stylesheet" href="css/temp.css">
 
 <div class="hcContentContainer bgColorBrand1">
-  <header class="hcPageHeaderSimple">
+  <header class="hcPageHeaderSimple hcBasicSideMargin">
     <div class="">Project Name Long</div>
     <div class="">
       <nav>
         <a href="#">About</a>
         <a href="#">Edition</a>
         <button>More #</button>
-        <a href="#" class="secundair">Extra about</a>
-        <a href="#" class="secundair">Extra edition</a>
-        <a href="#" class="secundair">Extra About</a>
-        <a href="#" class="secundair">Extra aEdition</a>
+        <a href="#" class="hcSecundairNav">Extra about</a>
+        <a href="#" class="hcSecundairNav">Extra edition</a>
+        <a href="#" class="hcSecundairNav">Extra About</a>
+        <a href="#" class="hcSecundairNav">Extra aEdition</a>
       </nav>
     </div>
   </header>
 </div>
 
 <div class="hcContentContainer">
-    <div class="hcBlockText">
-        <h2>Summary</h2>
-        <p>Here's a summery of all the above</p>
-    </div>
+  <div class="hcHeadSpace hcBasicSideMargin"><h1>Summary</h1></div>
+  <div class="hcBlockText hcBasicSideMargin">
+
+      <p>I'll admit it took me longer than it probably should have (way back when) when I was learning the basics of CSS. In both cases, they are selecting list items that are children of unordered lists. But there is a difference between children and descendants.</p>
+      <p>The first selector above is a decendant selector. It will select any list items that are anywhere underneath an unordered list in the markup structure. The list item could be buried three levels deep within other nested lists, and this selector will still match it. The second selector above is a child combinator selector. This means it will only select list items that are direct children of an unordered list. In otherwords, it only looks one level down the markup structure, no deeper. So if there was another unordered list nested deeper, the list item children of it will not be targeted by this selector.</p>
+  </div>
 </div>
 
 
