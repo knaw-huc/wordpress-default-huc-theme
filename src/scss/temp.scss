@@ -146,3 +146,58 @@ nav a:first-child {
 
   }
 }
+
+
+
+
+
+
+
+// <div class="hcContentContainer bgColorBrand1 " id="hcMenu">
+//   <header class="hcPageHeaderSimple hcBasicSideMargin">
+//     <div class="hcBrand">
+//       <div class="hcBrandLogo"><img src="images/logo-huygens-white.png" alt=""></div>
+//       <div class="hcBrandName">Project Name Long</div>
+//     </div>
+//
+//       <nav>
+//         <a href="#">About</a>
+//         <a href="#">Edition</a>
+//         <button class="hcMenuButton" id="hcMenuButton">More <img src="images/icons/menu-inv.svg"></button>
+//         <a href="#" class="hcSecundairNav">Introduction</a>
+//         <a href="#" class="hcSecundairNav">Team</a>
+//         <a href="#" class="hcSecundairNav">Colophon</a>
+//       </nav>
+//
+//   </header>
+// </div>
+
+
+// hc2columns
+
+.hc2columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.hc2columns > * {
+  flex-basis: 100%;
+}
+
+
+@media (min-width: 600px) {
+  .hc2columns {
+    flex-direction: row;
+  }
+
+  .hc2columns > * {
+    flex-basis: 50%;
+  }
+}
+
+
+.elablogo {
+  width: 250px !important;
+  height: auto;
+  margin-top: 1rem
+}

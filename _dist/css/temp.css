@@ -105,3 +105,21 @@ nav a:first-child {
     margin-bottom: 3rem; }
   .hcFullscreenMenu .hcPageHeaderSimple {
     flex-direction: column; }
+
+.hc2columns {
+  display: flex;
+  flex-direction: column; }
+
+.hc2columns > * {
+  flex-basis: 100%; }
+
+@media (min-width: 600px) {
+  .hc2columns {
+    flex-direction: row; }
+  .hc2columns > * {
+    flex-basis: 50%; } }
+
+.elablogo {
+  width: 250px !important;
+  height: auto;
+  margin-top: 1rem; }

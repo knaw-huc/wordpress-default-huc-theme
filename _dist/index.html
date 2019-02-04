@@ -37,14 +37,29 @@
   </header>
 </div>
 
-<div class="hcContentContainer">
+<div class="hcContentContainer hcMarginBottom5">
   <div class="hcHeadSpace hcBasicSideMargin"><h1>Summary</h1></div>
-  <div class="hcBlockText hcBasicSideMargin">
+  <article class="hcBlockText hcBasicSideMargin">
 
       <p>I'll admit it took me longer than it probably should have (way back when) when I was learning the basics of CSS. In both cases, they are selecting list items that are children of unordered lists. But there is a difference between children and descendants.</p>
       <p>The first selector above is a decendant selector. It will select any list items that are anywhere underneath an unordered list in the markup structure. The list item could be buried three levels deep within other nested lists, and this selector will still match it. The second selector above is a child combinator selector. This means it will only select list items that are direct children of an unordered list. In otherwords, it only looks one level down the markup structure, no deeper. So if there was another unordered list nested deeper, the list item children of it will not be targeted by this selector.</p>
-  </div>
+  </article>
 </div>
+
+
+<footer class="hcContentContainer colorBgGrey hcMarginBackground">
+  <div class="hc2columns">
+    <div class="hcBasicSideMargin">Dit is een eLaborate publicatie. eLaborate is een Huygens ING product.<br><img src="images/logo-elab-grey.png" alt="eLaborate logo" class="elablogo"></div>
+    <div class="hcBasicSideMargin hcAlignVertical">
+        <a href="#">About</a>
+        <a href="#">Edition</a>
+        <a href="#" class="hcSecundairNav">Introduction</a>
+        <a href="#" class="hcSecundairNav">Team</a>
+        <a href="#" class="hcSecundairNav">Colophon</a>
+    </div>
+  </div>
+</footer>
+
 
 
 
