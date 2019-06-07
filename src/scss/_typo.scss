@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,700');
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,700');
+//@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,700');
 
 body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 140%;
 	font-style: normal;
 	color: $colorTxt;
@@ -31,7 +31,7 @@ h3 {
 }
 
 h4 {
-	font-size: 1em;
+	font-size: .85em;
 	line-height: 130%;
 	font-weight: 300;
 	font-style: italic;
@@ -44,7 +44,7 @@ h4 {
 	}
 
 	h1 {
-		font-size: 2em;
+		font-size: 1.5em;
 	}
 
 	h1, h2, h3, h4 {
@@ -64,4 +64,12 @@ p {
 
 strong {
 	font-weight: 700;
+}
+
+.hcSmallTxt {
+	font-size: .85rem
+}
+
+.hcMonospace {
+	font-family: monospace;
 }

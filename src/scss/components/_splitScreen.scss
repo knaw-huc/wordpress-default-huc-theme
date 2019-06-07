@@ -1,0 +1,51 @@
+.splitScreen {
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+
+}
+.splitScreenLeft {
+  display: none;
+
+}
+.splitScreenRight {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+}
+.splitScreenContent {
+  max-width: 450px;
+
+}
+
+@media (min-width: 800px) {
+
+  .splitScreen {
+    min-height: 66vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+
+  }
+  .splitScreenLeft {
+    display: flex;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-right: 1px solid #fff;
+
+  }
+  .splitScreenRight {
+    width: 50%;
+
+  }
+
+
+}

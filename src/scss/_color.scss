@@ -5,12 +5,18 @@ $colorTertiary: #56504b;
 $colorLink: #0087d4;
 
 $colorGreyVeryLight: #fbfbfb;
-$colorGreyLight: #fafafa;
+$colorGreyLightBg: #fafafa;
+$colorGreyLightElement: darken( $colorGreyLightBg, 5% );
 $colorGreyMid: #999999;
 $colorGreyDark: #3e3e3e;
 $colorTxt: #3e3e3e;
 $colorWhite: #fff;
+$colorFormElements: #f0f5f9;
 
+$colorInfo: #00d1ff;
+$colorReward: #9ed041;
+$colorError: #d42600;
+$colorCaution: #e3ca68;
 
 $colorHuygensBlueDark:#082045;
 $colorHuygensBlueLight:#66abcf;
@@ -21,6 +27,8 @@ $colorHuygensGreyLight:#efefef;
 $colorHuygensGreyMid:#d0d8d9;
 $colorHuygensBlueDarkText:#00153c;
 
+$colorDutchPrizePapersGreen: #83ffcc;
+$colorDutchPrizePapersBlue: #035591;
 
 // Grey
 $greyLight: rgb(246, 246, 246);
@@ -35,6 +43,26 @@ a {
 	color: $colorLink;
 }
 
+$colorFormElements: #f0f5f9;
+
+
+
 .colorBgGrey {
   background-color: $greyLight;
+}
+
+.colorBgGreyLight {
+  background-color: $colorGreyVeryLight;
+}
+
+// .colorBgGreyMin {
+//   background-color: lighten( $greyLight, 5% );
+// }
+
+.colorBgGreyPlus {
+  background-color: darken( $greyLight, 10% );
+}
+
+.hcTxtColorGreyMid {
+	color: $colorGreyMid;
 }

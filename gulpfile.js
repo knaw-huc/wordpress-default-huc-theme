@@ -1,6 +1,8 @@
 // npm i
 // npm audit fix --force
 
+// gulp json
+
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
@@ -17,35 +19,56 @@ var reload      = browserSync.reload;
 const using = require('gulp-using');
 const get = require('simple-get');
 const markdown = require('gulp-markdown');
+const loadJsonFile = require('load-json-file');
 
+// handlebars includes folders
 var options = {
-    batch : ['./src/components/', './content/html/']
+    batch : ['./src/components/']
     }
 
-var dst =       '_dist/';
+var dst =       '_dist/wp-huc-theme';//'_dist/';
 var prebuild =  'react/';
 var fScss=      'src/scss/**/*.scss';
 var fHtml=      'src/**/*.html';
+var fHtmlNot=   '!src/components/nav.html';
 var fImages=    'src/images/**/*';
 var fAssets=    'src/util-images-assets/**/*';
 var fJs=        'src/js/**/*';
-var fJson=      ['src/**/*.json', 'content/**/*.json'];
+var fJson=      'content/data/**/*.json';
 var fMd=        'content/**/*.md';
 var cssUtil=    'src/css-util/**/*';
+var fWp=        'src/wp/**/*';
 
-var siteJson = require('./content/data/site.json');
+var siteJson;
 
+gulp.task('loadJson', function(done) {
+  loadJsonFile('./content/data/site.json').then(json => {
+    siteJson =json;
+  });
+  done();
+});
+
+
+
+// gulp.task('browserSync', function(done) {
+//   browserSync.init({
+//     //proxy: "http://localhost:8888/ga1",
+//     server: {
+//       baseDir: dst
+//     },
+//     browser: ["google chrome"], //, "firefox"
+//   })
+//   done();
+// })
 
 gulp.task('browserSync', function(done) {
-  browserSync.init({
-    //proxy: "http://localhost:8888/wp-huc"
-    server: {
-      baseDir: dst
-    },
-    browser: ["google chrome"], //, "firefox"
-  })
-  done();
-})
+    browserSync.init({
+        proxy: "http://localhost:8888/wp-default"
+    });
+    done();
+});
+
+
 
 function reload(done) {
   browserSync.reload();
@@ -59,23 +82,20 @@ gulp.task('clean', function () {
 });
 
 
-gulp.task('md', function() {
-  return gulp.src(cssUtil)
-    .pipe(markdown())
-    .pipe(gulp.dest('content/html/'));
-});
+gulp.task('json', function(done) {
+  var prejson = [];
 
-
-
-
-gulp.task('nav', function(done) {
-
-  gulp.src('./src/templates/nav.html')
+  gulp.src('./content/data/templ-site.html')
       .pipe(plumber())
-      .pipe(handlebars(siteJson, options))
-      .pipe(gulp.dest('src/components/'));
+      .pipe(handlebars(prejson, options))
+      .pipe(rename('site.json'))
+      .pipe(gulp.dest('content/data/'));
   done();
 });
+
+
+
+
 
 
 
@@ -83,7 +103,7 @@ gulp.task('sass', function(){
   return gulp.src('./src/scss/*')
     .pipe(plumber())
     .pipe(sass()) //{outputStyle: 'compressed'}
-    .pipe(gulp.dest(dst+'css'))
+    .pipe(gulp.dest(dst+'/css'))
 });
 
 
@@ -95,11 +115,10 @@ gulp.task('buildFromTemplates', function(done) {
           fileName = page.name.replace(/ +/g, '-').toLowerCase();
           template = page.template;
 
-      gulp.src('./src/templates/'+template+'.html')
+      gulp.src('./src/templates/'+template)
           .pipe(plumber())
-
           .pipe(handlebars(page, options))
-          .pipe(rename(fileName + ".html"))
+          .pipe(rename(fileName))
           .pipe(useref())
           .pipe(gulp.dest(dst))
           .pipe(browserSync.stream());
@@ -109,12 +128,13 @@ gulp.task('buildFromTemplates', function(done) {
 
 
 gulp.task('copyFiles', function(done) {
-  return gulp.src([fAssets, fImages])
-      .pipe(gulp.dest(dst+'images'))
 
 
-  return gulp.src(fJs)
-      .pipe(gulp.dest(dst+'js'))
+  // return gulp.src(fJs)
+  //     .pipe(gulp.dest(dst+'js'))
+
+    return gulp.src(fWp)
+        .pipe(gulp.dest(dst))
   done();
 });
 
@@ -123,7 +143,7 @@ gulp.task('copyFiles', function(done) {
 
 
 gulp.task('build',
-  gulp.series('clean', 'md', 'sass', 'buildFromTemplates', 'copyFiles',
+  gulp.series('loadJson', 'clean', 'sass', 'buildFromTemplates', 'copyFiles',
   function(done) {
       done();
   }
@@ -131,7 +151,7 @@ gulp.task('build',
 
 
 gulp.task('watch', function () {
-  gulp.watch([fHtml, fScss, fJs, cssUtil, fAssets], gulp.series('build'));
+  gulp.watch([fJson, fHtml, fHtmlNot, fScss, fJs, cssUtil, fAssets,fWp], gulp.series('build'));
 });
 
 

@@ -1,50 +1,48 @@
 // Alignments and directions
 
-.alignHorizontal {
+.hcAlignHorizontal {
   display: flex;
   flex-direction: row;
 }
 
-.alignVertical {
+.hcAlignVertical {
   display: flex;
   flex-direction: column;
 }
 
-.alignLeft {
+.hcAlignLeft {
   display: flex;
   justify-content: flex-start;
 }
 
-.alignRight {
+.hcAlignRight {
   display: flex;
   justify-content: flex-end;
 }
 
-.alignVertical.alignRight {
+.hcAlignVertical.alignRight {
   display: flex;
   align-items: flex-end;
 }
 
 
-.alignCenter {
+.hcAlignCenter {
   display: flex;
   justify-content: center;
 }
 
 
-
-
-.alignVertical.alignCenter {
+.hcAlignVertical.alignCenter {
   display: flex;
   align-items: center;
 }
 
-.blockCenter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.fullHeight {
-  min-height: 100vh;
-}
+// .hcBlockCenter {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+//
+// .hcFullHeight {
+//   min-height: 100vh;
+// }
