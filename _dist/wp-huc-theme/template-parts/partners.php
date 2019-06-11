@@ -10,7 +10,14 @@
     query_posts( $args );
 
     if ( have_posts() ) :
-      echo '<h2>Partners</h2><div class="partners">';
+
+      ?>
+      <div class="itemBlock hcBasicSideMargin">
+        <h2 class="hcMarginTop3">Partners</h2>
+      </div>
+      <div class="partners">
+      <?php
+
       while ( have_posts() ) : the_post();
       if ( has_post_thumbnail() ) {?>
         <div class="partnerItem">

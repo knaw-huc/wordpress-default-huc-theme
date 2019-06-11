@@ -164,6 +164,16 @@ strong {
 .hcMonospace {
   font-family: monospace; }
 
+.itemBlock {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; }
+  .itemBlock h2 {
+    text-align: center;
+    width: 100%;
+    display: block; }
+
 .header {
   display: flex;
   flex-direction: column;
@@ -207,7 +217,8 @@ strong {
     width: calc(50% - 50px); }
   .top-navigation {
     text-align: right;
-    justify-content: flex-end; } }
+    justify-content: flex-end;
+    padding-right: 3rem; } }
 
 .splitScreen {
   width: 100vw;
@@ -287,7 +298,6 @@ strong {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 3rem;
   padding: 2rem; }
 
 .partners img {
@@ -304,4 +314,23 @@ strong {
   background-color: #fff; }
 
 .bgLightGrey {
-  background-color: #f0f0f0; }
+  background-color: #f0f0f0;
+  width: 100%; }
+
+.posts {
+  display: flex;
+  flex-direction: column; }
+
+.post {
+  display: flex;
+  flex-direction: column; }
+
+.post a {
+  color: #3e3e3e; }
+
+@media (min-width: 800px) {
+  .post {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; } }

@@ -1,0 +1,22 @@
+.posts {
+	display: flex;
+	flex-direction: column;
+}
+
+.post {
+	display: flex;
+	flex-direction: column;
+}
+
+.post a{
+	color: $colorTxt;
+}
+
+@media (min-width: 800px) {
+	.post {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
