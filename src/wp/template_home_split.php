@@ -7,7 +7,13 @@ get_header();
 	get_template_part( 'template-parts/home-hero-split' );
 	get_template_part( 'template-parts/homepage-items' );
 	get_template_part( 'template-parts/partners' );
-	get_template_part( 'template-parts/posts' );
+
+	//news
+	if (get_theme_mod('homeBuild_news', false)) {
+		get_template_part( 'template-parts/posts' );
+	}
+
+
 ?>
 
 <?php

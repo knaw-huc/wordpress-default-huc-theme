@@ -323,7 +323,8 @@ strong {
 
 .post {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-bottom: 1rem; }
 
 .post a {
   color: #3e3e3e; }
@@ -334,3 +335,7 @@ strong {
     flex-direction: row;
     justify-content: space-between;
     align-items: center; } }
+
+.thumbnail {
+  width: 100px;
+  height: auto; }

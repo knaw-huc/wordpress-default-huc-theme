@@ -7,6 +7,8 @@
  * @package Gutenbergtheme
  */
 
+
+
 if ( ! function_exists( 'gutenbergtheme_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -196,6 +198,13 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Customizer additions HUC.
+ */
+require get_template_directory() . '/inc/huc-customizer.php';
+
+
 
 /**
  * Load Jetpack compatibility file.
