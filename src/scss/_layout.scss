@@ -11,3 +11,21 @@
 
 	}
 }
+
+
+.xCols {
+	display: flex;
+	flex-direction: column;
+}
+
+.xCols >*{
+	flex: 1;
+	padding-right: 2rem;
+}
+
+@media (min-width: 800px) {
+	.xCols {
+		display: flex;
+		flex-direction: row;
+	}
+}

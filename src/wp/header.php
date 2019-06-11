@@ -21,13 +21,32 @@
 	wp_head();
 	$classList = ob_get_contents();
 	ob_end_clean();
-
 	echo str_replace("body.custom-background",".customBackground",$classList);
 
 	?>
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style-custom.css">
 
+	<?php
+	if (get_theme_mod('brandcolor1') != '') {
+	?>
+	<style>
+	.current-menu-item  a{
+	  border-bottom: 3px solid <?php echo get_theme_mod('brandcolor1') ?>;
+	}
+
+	.footer  {
+		background-color: <?php echo get_theme_mod('footerColorBG') ?>;
+	}
+
+	</style>
+
+	<?php
+	}
+  ?>
+
 </head>
+
+
 
 <body <?php body_class(); ?>>
 
@@ -43,7 +62,8 @@
 					'menu_id'        => 'primary-menu',
 					'echo' => false,
 				) );
-				echo strip_tags($cleanMenu, "<a>");
+				echo $cleanMenu;
+				//echo strip_tags($cleanMenu, "<a>");
 			?>
 		</nav>
 	</div>

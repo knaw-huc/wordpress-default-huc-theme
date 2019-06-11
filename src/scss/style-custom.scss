@@ -12,3 +12,16 @@
 @import 'components/homepage-items';
 @import 'components/partners';
 @import 'posts';
+
+.tag {
+  font-style: italic;
+}
+
+.tag::before {
+  content: "#";
+}
+
+
+.footer {
+  padding: 3rem 0;
+}

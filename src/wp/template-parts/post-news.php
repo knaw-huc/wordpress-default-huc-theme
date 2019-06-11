@@ -1,7 +1,18 @@
-<div class="post extraa">
+<?php
+$posttags = get_the_tags();
+if ($posttags) {
+
+  foreach($posttags as $tag) {
+    $tageList = $tageList.'<span class="tag">'.$tag->name.'</span> ';
+  }
+
+}
+?>
+
+<div class="post hcBasicSideMargin">
   <a href="<?php the_permalink(); ?>">
     <strong><?php the_title(); ?></strong><br>
-    <?php the_tags(); ?><?php echo get_the_date(); ?>
+    <?php echo $tageList ?> <?php echo get_the_date(); ?> 
 
   </a>
 
