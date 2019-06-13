@@ -27,6 +27,7 @@ var options = {
     }
 
 var dst =       '_dist/wp-huc-theme';//'_dist/';
+var dstCopy =       '_dist/wp-huc-theme/**/*';//'_dist/';
 var prebuild =  'react/';
 var fScss=      'src/scss/**/*.scss';
 var fHtml=      'src/**/*.html';
@@ -40,10 +41,14 @@ var cssUtil=    'src/css-util/**/*';
 var fWp=        'src/wp/**/*';
 
 var siteJson;
+var copyPath;
 
 gulp.task('loadJson', function(done) {
   loadJsonFile('./content/data/site.json').then(json => {
     siteJson =json;
+  });
+  loadJsonFile('./content/data/copyPath.json').then(json => {
+    copyPath =json;
   });
   done();
 });
@@ -128,13 +133,16 @@ gulp.task('buildFromTemplates', function(done) {
 
 
 gulp.task('copyFiles', function(done) {
-
-
-  // return gulp.src(fJs)
-  //     .pipe(gulp.dest(dst+'js'))
-
     return gulp.src(fWp)
         .pipe(gulp.dest(dst))
+
+  done();
+});
+
+
+gulp.task('copyFilesWebserver', function(done) {
+    return gulp.src(dstCopy)
+        .pipe(gulp.dest(copyPath.copyDestination))
   done();
 });
 
@@ -143,7 +151,7 @@ gulp.task('copyFiles', function(done) {
 
 
 gulp.task('build',
-  gulp.series('loadJson', 'clean', 'sass', 'buildFromTemplates', 'copyFiles',
+  gulp.series('loadJson', 'clean', 'sass', 'buildFromTemplates', 'copyFiles', 'copyFilesWebserver',
   function(done) {
       done();
   }
