@@ -22,7 +22,7 @@
       if ( has_post_thumbnail() ) {?>
         <div class="partnerItem">
           <a href="<?php echo get_post_meta($post->ID, 'partner_url', true); ?>">
-            <img src="<?php the_post_thumbnail_url('medium') ?>)">
+            <img src="<?php the_post_thumbnail_url('medium') ?>">
           </a>
         </div>
 
