@@ -26,9 +26,7 @@
 	?>
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style-custom.css">
 
-	<?php
-	if (get_theme_mod('brandcolor1') != '') {
-	?>
+
 	<style>
 	.current-menu-item  a{
 	  border-bottom: 3px solid <?php echo get_theme_mod('brandcolor1') ?>;
@@ -40,9 +38,6 @@
 
 	</style>
 
-	<?php
-	}
-  ?>
 
 </head>
 

@@ -212,3 +212,60 @@ require get_template_directory() . '/inc/huc-customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
+add_action('admin_head', 'wpse_50092_script_enqueuer');
+
+function wpse_50092_script_enqueuer() {
+    global $current_screen;
+    if('page' != $current_screen->id) return;
+
+    echo <<<HTML
+        <script type="text/javascript">
+        jQuery(document).ready( function($) {
+					setTimeout(function() {
+						if($('#inspector-select-control-0').val() == 'template_output.php') {
+								// show the meta box
+								$('.pods-form-ui-row-name-testfield').show();
+							 console.log('show!');
+						} else {
+								// hide your meta box
+								$('.pods-form-ui-row-name-testfield').hide();
+							 console.log($('inspector-select-control-0').val());
+						}
+
+						// Debug only
+						// - outputs the template filename
+						// - checking for console existance to avoid js errors in non-compliant browsers
+						if (typeof console == "object")
+								console.log ('default value = ' + $('#inspector-select-control-0').val());
+
+	    		}, 500);
+
+            /**
+             * Adjust visibility of the meta box at startup
+            */
+
+
+
+
+            /**
+             * Live adjustment of the meta box visibility
+            */
+            $('#inspector-select-control-0').live('change', function(){
+                    if($(this).val() == 'template_output.php') {
+                    // show the meta box
+                    $('.pods-form-ui-row-name-testfield').show();
+                } else {
+                    // hide your meta box
+                    $('.pods-form-ui-row-name-testfield').hide();
+                }
+
+                // Debug only
+                if (typeof console == "object")
+                    console.log ('live change value = ' + $(this).val());
+            });
+        });
+        </script>
+HTML;
+}
