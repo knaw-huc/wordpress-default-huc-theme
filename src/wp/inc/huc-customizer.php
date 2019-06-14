@@ -40,6 +40,19 @@ $wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'homeB
   'description'    => 'Pick the background color of the right side of the splitscreen.',
 )));
 
+// Split hero TXT Color
+$wp_customize->add_setting( 'homeBuild_splitHeroTXTColor' , array(
+  'default'     => '#111',
+  'transport'   => 'refresh',
+) );
+
+$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'homeBuild_splitHeroTXTColor', array(
+  'label'       => 'Show Hero text color',
+  'section'     => 'cd_homepage_build',
+  'settings'    => 'homeBuild_splitHeroTXTColor',
+  'description'    => 'Pick the background color of the right side of the splitscreen.',
+)));
+
 
 
 // partners
@@ -156,6 +169,43 @@ $wp_customize->add_setting( 'footerColorBG' , array(
 )));
 
 
+
+
+
+
+
+// eLaborate
+$wp_customize->add_section( 'elaborate' , array(
+    'title'      => 'eLaborate',
+    'priority'   => 85,
+) );
+
+// is elaborate
+$wp_customize->add_setting( 'isElaborate' , array(
+  'default'     => false,
+  'transport'   => 'refresh',
+));
+
+$wp_customize->add_control( 'isElaborate', array(
+  'type'        => 'checkbox',
+  'label'       => 'Show eLaborate utilities',
+  'section'     => 'elaborate',
+  'settings'    => 'isElaborate',
+  'description'    => 'If turned on an eLaborate bar will apprear and a large button to the edition.',
+));
+
+// is Huygens ing approved
+$wp_customize->add_setting( 'ElaborateAproved' , array(
+  'default'     => false,
+  'transport'   => 'refresh',
+));
+
+$wp_customize->add_control( 'ElaborateAproved', array(
+  'type'        => 'checkbox',
+  'label'       => 'Huygens ING approved',
+  'section'     => 'elaborate',
+  'settings'    => 'ElaborateAproved',
+));
 
 
 }

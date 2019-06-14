@@ -53,7 +53,7 @@
 			<?php
 			//echo '>'.get_custom_logo().'<';
 			if (get_custom_logo() == '') {
-			echo '<span class="siteTitle">'.get_bloginfo( 'name' ).'</span>';
+			echo '<span class="siteTitle"><a href="'.get_bloginfo( 'url' ).'">'.get_bloginfo( 'name' ).'</a></span>';
 			} else {
 				echo get_custom_logo();
 			}

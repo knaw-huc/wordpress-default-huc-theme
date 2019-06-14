@@ -9,6 +9,10 @@ get_header();
 		get_template_part( 'template-parts/home-hero-split' );
 	}
 
+	if (get_theme_mod('isElaborate', false)) {
+		get_template_part( 'template-parts/elaborateBar' );
+	}
+
 	get_template_part( 'template-parts/homepage-items' );
 
 	//partners

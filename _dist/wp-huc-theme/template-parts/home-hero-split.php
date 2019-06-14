@@ -7,7 +7,7 @@ if ( have_posts() ):
 
 <div class="splitScreen">
 	<div class="splitScreenLeft" style="background-image: url(<?php the_post_thumbnail_url('full') ?>)"> </div>
-	<div class="splitScreenRight"  style="background-color: <?php echo get_theme_mod('homeBuild_splitHeroColor', '#fff') ?>">
+	<div class="splitScreenRight"  style="background-color: <?php echo get_theme_mod('homeBuild_splitHeroColor', '#fff') ?>; color: <?php echo get_theme_mod('homeBuild_splitHeroTXTColor', '#111') ?>">
 		<div class="splitScreenContent hcBasicSideMargin">
 			<h1><?php echo the_title(); ?></h1><br>
 					<p><?php the_content(); ?></p>
