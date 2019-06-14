@@ -226,12 +226,10 @@ function wpse_50092_script_enqueuer() {
 					setTimeout(function() {
 						if($('#inspector-select-control-0').val() == 'template_output.php') {
 								// show the meta box
-								$('.pods-form-ui-row-name-testfield').show();
-							 console.log('show!');
+								$('.pods-form-ui-row-name-show-list-of').show();
 						} else {
 								// hide your meta box
-								$('.pods-form-ui-row-name-testfield').hide();
-							 console.log($('inspector-select-control-0').val());
+								$('.pods-form-ui-row-name-show-list-of').hide();
 						}
 
 						// Debug only
@@ -255,10 +253,10 @@ function wpse_50092_script_enqueuer() {
             $('#inspector-select-control-0').live('change', function(){
                     if($(this).val() == 'template_output.php') {
                     // show the meta box
-                    $('.pods-form-ui-row-name-testfield').show();
+                    $('.pods-form-ui-row-name-show-list-of').show();
                 } else {
                     // hide your meta box
-                    $('.pods-form-ui-row-name-testfield').hide();
+                    $('.pods-form-ui-row-name-show-list-of').hide();
                 }
 
                 // Debug only
