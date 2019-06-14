@@ -49,7 +49,16 @@
 
 	<div class="header">
 		<div class="headerLeft">&nbsp;</div>
-		<div class="headerMid"><?php the_custom_logo(); ?></div>
+		<div class="headerMid">
+			<?php
+			//echo '>'.get_custom_logo().'<';
+			if (get_custom_logo() == '') {
+			echo '<span class="siteTitle">'.get_bloginfo( 'name' ).'</span>';
+			} else {
+				echo get_custom_logo();
+			}
+
+			?></div>
 		<nav class="headerRight top-navigation">
 			<?php
 				$cleanMenu = wp_nav_menu( array(

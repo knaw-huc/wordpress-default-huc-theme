@@ -206,6 +206,11 @@ strong {
 .headerLeft, .headerMid, .headerRight {
   text-align: center; }
 
+.siteTitle {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700; }
+
 .top-navigation, .top-navigation ul {
   text-align: center;
   display: flex;
@@ -239,7 +244,7 @@ strong {
     width: 100px;
     height: auto; }
   .headerLeft, .headerRight {
-    width: calc(50% - 50px); }
+    width: calc(50% - 100px); }
   .top-navigation {
     text-align: right;
     justify-content: flex-end;
