@@ -6,8 +6,13 @@ if ( have_posts() ):
 ?>
 
 <div class="splitScreen">
-	<div class="splitScreenLeft" style="background-image: url(<?php the_post_thumbnail_url('full') ?>)"> </div>
-	<div class="splitScreenRight"  style="background-color: <?php echo get_theme_mod('homeBuild_splitHeroColor', '#fff') ?>; color: <?php echo get_theme_mod('homeBuild_splitHeroTXTColor', '#111') ?>">
+	<div class="splitScreenLeft" style="background-color: <?php echo get_theme_mod('blockLeftBGcolor', '#fff') ?>;
+																			background-image: url(<?php echo get_theme_mod('blockLeftImg') ?>);
+																			background-blend-mode: <?php echo get_theme_mod('blockLeftBlend') ?>"> </div>
+	<div class="splitScreenRight" style="background-color: <?php echo get_theme_mod('blockRightBGcolor', '#fff') ?>;
+																			background-image: url(<?php echo get_theme_mod('blockRightImg') ?>);
+																			background-blend-mode: <?php echo get_theme_mod('blockRightBlend') ?>;
+																				color: <?php echo get_theme_mod('blockRightTXTcolor', '#111') ?>">
 		<div class="splitScreenContent hcBasicSideMargin">
 			<h1><?php echo the_title(); ?></h1><br>
 					<p><?php the_content(); ?></p>

@@ -14,7 +14,7 @@ $wp_customize->add_section( 'cd_homepage_build' , array(
 
 
 
-// Split hero
+// Split hero on / off
 $wp_customize->add_setting( 'homeBuild_splitHero' , array(
   'default'     => false,
   'transport'   => 'refresh',
@@ -27,31 +27,139 @@ $wp_customize->add_control( 'homeBuild_splitHero', array(
   'settings'    => 'homeBuild_splitHero',
 ));
 
-// Split hero Color
-$wp_customize->add_setting( 'homeBuild_splitHeroColor' , array(
+
+
+$wp_customize->add_section( 'Splitscreen' , array(
+    'title'      => 'Home Split screen',
+    'priority'   => 34,
+) );
+
+$wp_customize->add_control( 'homeBuild_splitHero2', array(
+  'type'        => 'checkbox',
+  'label'       => 'Show Hero splitscreen',
+  'section'     => 'Splitscreen',
+  'settings'    => 'homeBuild_splitHero',
+));
+
+
+// left block image
+$wp_customize->add_setting( 'blockLeftImg' , array(
+  'default'     => false,
+  'transport'   => 'refresh',
+) );
+
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'blockLeftImgC', array(
+  'label'       => 'Left block image',
+  'section'     => 'Splitscreen',
+  'settings'    => 'blockLeftImg',
+)));
+
+
+// left block BG color
+$wp_customize->add_setting( 'blockLeftBGcolor' , array(
   'default'     => '#fff',
   'transport'   => 'refresh',
 ) );
 
-$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'homeBuild_splitHeroColor', array(
-  'label'       => 'Show Hero color',
-  'section'     => 'cd_homepage_build',
-  'settings'    => 'homeBuild_splitHeroColor',
-  'description'    => 'Pick the background color of the right side of the splitscreen.',
+$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'blockLeftBGcolor', array(
+  'label'       => 'Left block background color',
+  'section'     => 'Splitscreen',
+  'settings'    => 'blockLeftBGcolor',
 )));
 
-// Split hero TXT Color
-$wp_customize->add_setting( 'homeBuild_splitHeroTXTColor' , array(
+
+// left block blend
+$wp_customize->add_setting( 'blockLeftBlend' , array(
+  'default'     => 'none',
+  'transport'   => 'refresh',
+) );
+
+$wp_customize->add_control( 'blockLeftblend', array(
+  'type'        => 'select',
+  'label'       => 'Left block blend mode',
+  'section'     => 'Splitscreen',
+  'settings'    => 'blockLeftBlend',
+  'choices' => array(
+    'multiply' => 'multiply',
+    'screen' => 'screen'
+  )
+));
+
+
+// right block image
+$wp_customize->add_setting( 'blockRightImg' , array(
+  'default'     => false,
+  'transport'   => 'refresh',
+) );
+
+$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'blockRightImgC', array(
+  'label'       => 'Right block image',
+  'section'     => 'Splitscreen',
+  'settings'    => 'blockRightImg',
+)));
+
+
+// right block BG color
+$wp_customize->add_setting( 'blockRightBGcolor' , array(
+  'default'     => '#fff',
+  'transport'   => 'refresh',
+) );
+
+$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'blockRightBGcolor', array(
+  'label'       => 'Right block background color',
+  'section'     => 'Splitscreen',
+  'settings'    => 'blockRightBGcolor',
+)));
+
+
+// right block blend
+$wp_customize->add_setting( 'blockRightTXTcolor' , array(
   'default'     => '#111',
   'transport'   => 'refresh',
 ) );
 
-$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'homeBuild_splitHeroTXTColor', array(
-  'label'       => 'Show Hero text color',
-  'section'     => 'cd_homepage_build',
-  'settings'    => 'homeBuild_splitHeroTXTColor',
-  'description'    => 'Pick the background color of the right side of the splitscreen.',
+$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'blockRightTXTcolor', array(
+  'label'       => 'Right block text color',
+  'section'     => 'Splitscreen',
+  'settings'    => 'blockRightTXTcolor',
 )));
+
+
+// right block blend
+$wp_customize->add_setting( 'blockRightBlend' , array(
+  'default'     => 'none',
+  'transport'   => 'refresh',
+) );
+
+$wp_customize->add_control( 'blockRightblend', array(
+  'type'        => 'select',
+  'label'       => 'Right block blend mode',
+  'section'     => 'Splitscreen',
+  'settings'    => 'blockRightBlend',
+  'choices' => array(
+    'multiply' => 'multiply',
+    'screen' => 'screen'
+  )
+));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -68,6 +176,18 @@ $wp_customize->add_control('homeBuild_Partners', array(
   'settings'    => 'homeBuild_Partners',
 ));
 
+
+
+
+
+
+
+
+
+
+
+
+
 //news
 $wp_customize->add_setting( 'homeBuild_news' , array(
   'default'     => false,
@@ -81,6 +201,12 @@ $wp_customize->add_control('homeBuild_news', array(
   'settings'    => 'homeBuild_news',
 ));
 
+
+
+
+
+
+
 // brand color title_tagline
 $wp_customize->add_setting( 'brandcolor1' , array(
   'default'     => 'rgb(13, 252, 239)',
@@ -93,6 +219,16 @@ $wp_customize->add_setting( 'brandcolor1' , array(
   'section'     => 'colors',
   'settings'    => 'brandcolor1',
 )));
+
+
+
+
+
+
+
+
+
+
 
 
 // footer
@@ -167,6 +303,13 @@ $wp_customize->add_setting( 'footerColorBG' , array(
   'section'     => 'footer',
   'settings'    => 'footerColorBG',
 )));
+
+
+
+
+
+
+
 
 
 
