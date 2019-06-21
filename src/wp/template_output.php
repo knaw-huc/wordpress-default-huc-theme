@@ -9,15 +9,17 @@ get_header();
 	while ( have_posts() ) : the_post();
 
 		get_template_part( 'template-parts/content', 'page' );
-		$type = get_post_meta($post->ID, 'show_list_of	', true);
+		$type = get_post_meta($post->ID, 'show_list_of', true);
 
 
 	endwhile; // End of the loop.
-	echo $type;
-	get_template_part( 'template-parts/outputList' );
+
+	//get_template_part( 'template-parts/outputList' );
+	include( locate_template( 'template-parts/outputList.php', false, false ) );
 	?>
 
 </main><!-- #primary -->
 
 <?php
+
 get_footer();

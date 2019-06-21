@@ -69,7 +69,7 @@ gulp.task('loadJson', function(done) {
 gulp.task('browserSync', function(done) {
     browserSync.init({
         //proxy: "http://localhost:8888/wp-default"
-        proxy: "http://localhost:8888/wp-test01"
+        proxy: "http://localhost:8888/wp-02"
 
     });
     done();
