@@ -7,8 +7,8 @@
         'post_type' => 'output',
         'order'     => 'ASC',
         'meta_key'   => 'output_type',
-	      //'meta_value' => $type,
-        'meta_value' => 'presentation'
+	      'meta_value' => $type,
+        //'meta_value' => 'presentation'
     );
     query_posts( $args );
 
