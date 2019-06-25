@@ -10,6 +10,7 @@ get_header();
 
 		get_template_part( 'template-parts/content', 'page' );
 		$type = get_post_meta($post->ID, 'show_list_of', true);
+		$idd = $post->ID;
 
 
 	endwhile; // End of the loop.
