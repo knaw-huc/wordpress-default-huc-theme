@@ -3,7 +3,7 @@
     <?php if ( has_post_thumbnail() ) {
             the_post_thumbnail( 'thumbnail' );
           } else {
-            echo '<img src="'.get_bloginfo( 'template_url' ).'/images/avatar.png" >';
+            echo '<img src="'.get_bloginfo( 'template_url' ).'/images/avatar.png" >'; 
           }
           ?>
   </div>
