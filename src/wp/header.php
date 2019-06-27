@@ -8,6 +8,17 @@
  *
  * @package Gutenbergtheme
  */
+
+function infNoteEmpty($field, $pre, $post) {
+	$out ='';
+	if ($field != '') {
+		$out = $pre.$field.$post;
+	}
+	return $out;
+
+}
+
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>

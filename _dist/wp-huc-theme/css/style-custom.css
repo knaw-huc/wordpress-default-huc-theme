@@ -469,3 +469,7 @@ strong {
 @media (min-width: 600px) {
   .cards {
     flex-direction: row; } }
+
+.smallGrey {
+  font-size: .9rem;
+  color: #6f6f6f; }
