@@ -11,6 +11,7 @@
 @import 'components/splitScreen';
 @import 'components/homepage-items';
 @import 'components/output';
+@import 'components/staff';
 @import 'components/partners';
 @import 'components/elaborate';
 @import 'posts';
@@ -26,4 +27,25 @@
 
 .footer {
   padding: 3rem 0;
+}
+
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.cards >* {
+  width: calc(50% - 1rem);
+  margin: 0 1rem 1rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media (min-width: 600px) {
+  .cards {
+    flex-direction: row;
+  }
 }

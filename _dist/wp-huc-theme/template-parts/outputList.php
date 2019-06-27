@@ -15,7 +15,7 @@
     if ( have_posts() ) :
 
       ?>
-      <div class="itemBlock hcBasicSideMargin">
+      <div class="itemBlock ">
       <ul class="outputList">
       <?php
 
@@ -26,7 +26,7 @@
           <?php
           if (get_post_meta($post->ID, 'output_type', true) == 'dataset') {
             get_template_part( 'template-parts/outputList-dataset' );
-          }elseif (get_post_meta($post->ID, 'output_type', true) == 'presentation') {
+          }elseif ( (get_post_meta($post->ID, 'output_type', true) == 'presentation') || (get_post_meta($post->ID, 'output_type', true) == 'publication') ) {
             get_template_part( 'template-parts/outputList-presentation' );
           }else {
             get_template_part( 'template-parts/outputList-default' );

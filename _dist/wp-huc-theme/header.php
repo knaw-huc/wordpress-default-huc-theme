@@ -62,14 +62,40 @@
 		<nav class="headerRight top-navigation">
 			<?php
 				$cleanMenu = wp_nav_menu( array(
-					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
 					'echo' => false,
+					'depth'=> 1,
 				) );
 				echo $cleanMenu;
-				//echo strip_tags($cleanMenu, "<a>");
+
 			?>
 		</nav>
+
+
+	</div>
+	<div class="subNav">
+
+
+<?php
+	$parentId = wp_get_post_parent_id( $post_ID );
+	if ($parentId ==0) {
+		$parentName = get_the_title();
+	}else {
+		$parentName = get_the_title($parentId);
+	}
+?>
+
+
+		<?php
+		$args = array(
+		    'menu_id'        => 'primary-menu',
+		    'submenu' => $parentName, //
+				'echo' => false,
+		);
+
+		$submenu = wp_nav_menu( $args );
+		echo $submenu; //strip_tags($submenu, "<a>");
+		?>
 	</div>
 
 

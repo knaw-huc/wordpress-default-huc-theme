@@ -44,8 +44,8 @@ a {
   color: #999999; }
 
 .hcBasicSideMargin {
-  padding-left: 2rem;
-  padding-right: 2rem; }
+  padding-left: 1rem;
+  padding-right: 1rem; }
 
 .hcBasicPading {
   padding: 1rem; }
@@ -165,7 +165,7 @@ strong {
   font-family: monospace; }
 
 .itemBlock {
-  max-width: 800px;
+  max-width: 636px;
   margin-left: auto;
   margin-right: auto;
   width: 100%; }
@@ -233,6 +233,23 @@ strong {
 
 .current-menu-item a {
   border-bottom: 3px solid; }
+
+.subNav {
+  padding: 1rem;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 3rem; }
+  .subNav a {
+    color: #3e3e3e;
+    padding: 1rem;
+    font-size: .9rem; }
+  .subNav li {
+    list-style: none; }
+  .subNav ul {
+    display: flex;
+    flex-direction: row; }
 
 @media (min-width: 800px) {
   .header {
@@ -333,10 +350,20 @@ strong {
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
+  .outputList p {
+    margin-bottom: 0; }
 
 .partnerLogoSmall {
   height: 50px;
   width: auto; }
+
+.staffAvatar img {
+  width: 60px;
+  height: auto;
+  border-radius: 50%; }
+
+.staffAvatar {
+  margin-right: 1rem; }
 
 .partners {
   max-width: 850px;
@@ -426,3 +453,19 @@ strong {
 
 .footer {
   padding: 3rem 0; }
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+
+.cards > * {
+  width: calc(50% - 1rem);
+  margin: 0 1rem 1rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+@media (min-width: 600px) {
+  .cards {
+    flex-direction: row; } }
