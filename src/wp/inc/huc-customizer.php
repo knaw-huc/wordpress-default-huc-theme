@@ -202,6 +202,20 @@ $wp_customize->add_control('homeBuild_news', array(
 ));
 
 
+//blog
+$wp_customize->add_setting( 'homeBuild_blog' , array(
+  'default'     => false,
+  'transport'   => 'refresh',
+) );
+
+$wp_customize->add_control('homeBuild_blog2', array(
+  'type'        => 'checkbox',
+  'label'       => 'Show blog articles',
+  'section'     => 'cd_homepage_build',
+  'settings'    => 'homeBuild_blog',
+));
+
+
 
 
 
