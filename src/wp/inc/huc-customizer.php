@@ -319,6 +319,21 @@ $wp_customize->add_setting( 'footerColorBG' , array(
 )));
 
 
+// Twitter
+$wp_customize->add_setting( 'footerTwitterId' , array(
+  'default'     => '',
+  'transport'   => 'refresh',
+) );
+
+$wp_customize->add_control( 'footer_block4', array(
+
+  'label'       => 'Twitter handle',
+  'section'     => 'footer',
+  'settings'    => 'footerTwitterId',
+));
+
+
+
 
 
 
