@@ -2,8 +2,22 @@
 <?php //hi
   wp_reset_postdata();
 
+  $blog = '';
+
+  if (get_theme_mod('homeBuild_blog', false)) {
+    $blog = 'blog';
+  }
+
   $args = array(
-      'order'     => 'DESC'
+      'order'     => 'DESC',
+      'tax_query' => array(
+            array(
+                'taxonomy' => 'category',
+                'field' => 'slug',
+                'terms' => array( $blog ),
+                'operator' => 'NOT IN'
+                )
+            )
   );
   query_posts( $args );
 

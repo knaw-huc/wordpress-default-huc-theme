@@ -2,22 +2,9 @@
 <?php //hi
   wp_reset_postdata();
 
-  $blog = '';
-
-  if (get_theme_mod('homeBuild_blog', false)) {
-    $blog = 'blog';
-  }
-
   $args = array(
       'order'     => 'DESC',
-      'tax_query' => array(
-            array(
-                'taxonomy' => 'category',
-                'field' => 'slug',
-                'terms' => array( $blog ),
-                'operator' => 'NOT IN'
-                )
-            )
+      'category_name' => 'blog'
   );
   query_posts( $args );
 
@@ -25,7 +12,7 @@
 
     ?>
     <div class="itemBlock hcBasicSideMargin">
-      <h2 class="hcMarginTop3">News</h2>
+      <h2 class="hcMarginTop3">Blog</h2>
     </div>
     <div class="itemBlock">
     <?php

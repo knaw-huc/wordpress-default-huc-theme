@@ -25,6 +25,11 @@ get_header();
 		get_template_part( 'template-parts/posts' );
 	}
 
+	//blog
+	if (get_theme_mod('homeBuild_blog', false)) {
+		get_template_part( 'template-parts/blogs' );
+	}
+
 
 ?>
 
