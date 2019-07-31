@@ -9,13 +9,19 @@
   </div>
   <div class="">
     <?php
+    echo get_the_title();
+    ?>
+    <div class="smallGrey">
+    <?php
+    echo infNoteEmpty(get_post_meta($post->ID, 'function_role', true), '', '');
+
     if (get_post_meta($post->ID, 'link_to_bio_or_linkedin', true) != '') {
-      $title = '<a href="'.get_post_meta($post->ID, 'link_to_bio_or_linkedin', true).'" target="_blanc">'.get_the_title().'</a>';
-    } else {
-      $title = get_the_title();
+      echo '<a href="'.get_post_meta($post->ID, 'link_to_bio_or_linkedin', true).'" target="_blanc"> (Personal page)</a>';
     }
-    echo $title;
-?>
-    <?php echo infNoteEmpty(get_post_meta($post->ID, 'function_role', true), '<div class="smallGrey">', '</div>') ?>
+    ?>
+
+
+    </div>
+
   </div>
 </div>

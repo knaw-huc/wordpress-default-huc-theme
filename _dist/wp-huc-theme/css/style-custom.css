@@ -353,6 +353,9 @@ strong {
   .outputList p {
     margin-bottom: 0; }
 
+.outputList > * {
+  padding-right: .5rem; }
+
 .partnerLogoSmall {
   height: 50px;
   width: auto; }
