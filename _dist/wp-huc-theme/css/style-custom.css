@@ -458,7 +458,8 @@ strong {
   content: "#"; }
 
 .footer {
-  padding: 3rem 0; }
+  padding: 3rem 0;
+  margin-top: 5rem; }
 
 .cards {
   display: flex;
