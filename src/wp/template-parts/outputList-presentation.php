@@ -28,8 +28,8 @@
               echo '<a href="'.$link_url.'">Download</a>';
       }
        ?>
-       <?php if (get_post_meta($post->ID, 'link_to_bio_or_linkedin', true) !='' ) {
-               $link_url = get_post_meta($post->ID, 'link_to_bio_or_linkedin', true);
+       <?php if (get_post_meta($post->ID, 'linktosite', true) !='' ) {
+               $link_url = get_post_meta($post->ID, 'linktosite', true);
 
                echo '<a href="'.$link_url.'" target="_blank" >See more...</a>';
        }
