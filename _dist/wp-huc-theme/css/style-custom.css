@@ -461,6 +461,10 @@ strong {
   padding: 3rem 0;
   margin-top: 5rem; }
 
+.twitterTimelineContainer {
+  height: 600px !important;
+  overflow: auto; }
+
 .cards {
   display: flex;
   flex-direction: column;

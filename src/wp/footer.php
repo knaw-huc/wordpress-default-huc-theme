@@ -33,7 +33,7 @@
     }
 
     if ( get_theme_mod('footerTwitterId') != '' ) {
-      echo '<div><a class="twitter-timeline" data-height=600 href="https://twitter.com/'.get_theme_mod('footerTwitterId').'">Tweets by GoldenAgents</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>';
+      echo '<div class="twitterTimelineContainer"><a class="twitter-timeline" href="https://twitter.com/'.get_theme_mod('footerTwitterId').'">Tweets by GoldenAgents</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>';
     }
 
      ?>
