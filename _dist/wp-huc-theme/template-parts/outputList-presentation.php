@@ -20,15 +20,20 @@
       echo $authors;
     } ?>
     </span>
+    <div class="">
+      <?php if (get_post_meta($post->ID, 'filelink', true) !='' ) {
+              $linkId = get_post_meta($post->ID, 'filelink', false);
+              $link_url = wp_get_attachment_url($linkId[0][ID]);
 
-</div>
+              echo '<a href="'.$link_url.'">Download</a>';
+      }
+       ?>
+       <?php if (get_post_meta($post->ID, 'link_to_bio_or_linkedin', true) !='' ) {
+               $link_url = get_post_meta($post->ID, 'link_to_bio_or_linkedin', true);
 
-<div class="">
-<?php if (get_post_meta($post->ID, 'filelink', true) !='' ) {
-        $linkId = get_post_meta($post->ID, 'filelink', false);
-        $link_url = wp_get_attachment_url($linkId[0][ID]);
+               echo '<a href="'.$link_url.'" target="_blank" >See more...</a>';
+       }
+        ?>
+    </div>
 
-        echo '<a href="'.$link_url.'">Download</a>';
-}
- ?>
 </div>
