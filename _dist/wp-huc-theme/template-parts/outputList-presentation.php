@@ -28,6 +28,7 @@
               echo '<a href="'.$link_url.'">Download</a>';
       }
        ?>
+       </div><div class="">
        <?php if (get_post_meta($post->ID, 'linktosite', true) !='' ) {
                $link_url = get_post_meta($post->ID, 'linktosite', true);
 
