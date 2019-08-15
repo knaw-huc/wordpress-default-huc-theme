@@ -4,7 +4,9 @@
 
   </div>
   <span class="hcSmallTxt">
-    By
+    Published on <?php
+    echo date("d-m-Y", strtotime(get_post_meta($post->ID, 'publication_date', true))); ?>
+    by
     <?php
     $pod = pods( 'output', get_the_id() );
     $related = $pod->field( 'creators' );

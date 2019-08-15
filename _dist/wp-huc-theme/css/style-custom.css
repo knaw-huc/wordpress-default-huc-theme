@@ -363,6 +363,15 @@ strong {
 .pub_add p {
   display: inline; }
 
+.listFilterBar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; }
+  .listFilterBar input {
+    padding: .2rem;
+    margin: 0 0 .5rem 0;
+    width: 50%; }
+
 .staffAvatar img {
   width: 60px;
   height: auto;
