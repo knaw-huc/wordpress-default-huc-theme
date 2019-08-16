@@ -348,7 +348,7 @@ strong {
     margin: 0 0 .5rem 0;
     padding-bottom: .5rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between; }
   .outputList p {
     margin-bottom: 0; }

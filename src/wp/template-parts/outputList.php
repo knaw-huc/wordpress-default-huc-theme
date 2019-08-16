@@ -6,8 +6,16 @@
     $args = array(
         'post_type' => 'output',
         'order'     => 'DESC',
+        'meta_key'   => 'publication_date',
 	      'orderby' => 'meta_value',
+        'meta_query' => array(
+                    array(
+                        'key' => 'output_type',
+                        'value' => $type,
+                        'compare' => '='
+                    )
 
+                ),
     );
     query_posts( $args );
 
@@ -20,13 +28,12 @@
         </div>
       <ul class="outputList" id="outputList">
       <?php
-$i = 1;
+
       while ( have_posts() ) : the_post();
       ?>
         <li>
 
           <?php
-          echo $i.' '.$type;
           if (get_post_meta($post->ID, 'output_type', true) == 'dataset') {
             get_template_part( 'template-parts/outputList-dataset' );
           }elseif ( (get_post_meta($post->ID, 'output_type', true) == 'presentation') || (get_post_meta($post->ID, 'output_type', true) == 'publication') ) {
@@ -35,7 +42,7 @@ $i = 1;
             get_template_part( 'template-parts/outputList-default' );
           }
           //get_template_part( 'template-parts/outputList-dataset' );
-$i = $i + 1;
+
            ?>
         </li>
 
