@@ -26,7 +26,7 @@ $i = 1;
         <li>
 
           <?php
-          echo $i.'<br>';
+          echo $i.' '.$type;
           if (get_post_meta($post->ID, 'output_type', true) == 'dataset') {
             get_template_part( 'template-parts/outputList-dataset' );
           }elseif ( (get_post_meta($post->ID, 'output_type', true) == 'presentation') || (get_post_meta($post->ID, 'output_type', true) == 'publication') ) {
