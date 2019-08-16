@@ -26,14 +26,15 @@
         <div class="listFilterBar">
           <input type="text" id="filterWord" onkeyup="filterList()" placeholder="Filter in list">
         </div>
-      <ol class="outputList" id="outputList">
+      <ul class="outputList" id="outputList">
       <?php
-
+$i = 1;
       while ( have_posts() ) : the_post();
       ?>
         <li>
 
           <?php
+          echo $i.'<br>';
           if (get_post_meta($post->ID, 'output_type', true) == 'dataset') {
             get_template_part( 'template-parts/outputList-dataset' );
           }elseif ( (get_post_meta($post->ID, 'output_type', true) == 'presentation') || (get_post_meta($post->ID, 'output_type', true) == 'publication') ) {
@@ -42,7 +43,7 @@
             get_template_part( 'template-parts/outputList-default' );
           }
           //get_template_part( 'template-parts/outputList-dataset' );
-
+$i = $i + 1;
            ?>
         </li>
 
@@ -51,7 +52,7 @@
       endwhile;
     endif;
     ?>
-  </ol>
+  </ul>
 
   <script>
 function filterList() {
