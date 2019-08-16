@@ -26,7 +26,7 @@
         <div class="listFilterBar">
           <input type="text" id="filterWord" onkeyup="filterList()" placeholder="Filter in list">
         </div>
-      <ul class="outputList" id="outputList">
+      <ol class="outputList" id="outputList">
       <?php
 
       while ( have_posts() ) : the_post();
@@ -51,7 +51,7 @@
       endwhile;
     endif;
     ?>
-  </ul>
+  </ol>
 
   <script>
 function filterList() {
