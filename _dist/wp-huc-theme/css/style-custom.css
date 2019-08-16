@@ -343,7 +343,6 @@ strong {
   margin: 0 0 0 0;
   padding: .5rem 0 0 0; }
   .outputList li {
-    list-style: none;
     border-bottom: 1px solid #dfdfdf;
     margin: 0 0 .5rem 0;
     padding-bottom: .5rem;
