@@ -1,3 +1,12 @@
+<?php
+// function ifNotEmptywww($arr, $pre, $post) {
+//   $output = '';
+//   if ($arr!= '') {
+//     $output = $pre.$arr['post_title'].$post;
+//   }
+//   return $output;
+// }
+?>
 <div class="">
   <div>
     <em><?php the_title(); ?></em> <span class="hcTxtColorGreyMid pub_add"><?php echo get_post_meta($post->ID, 'additional_notes', true); ?></span>
@@ -20,6 +29,26 @@
       }
       $authors = substr_replace($authors, "", -2);
       echo $authors;
+
+      $creat2 = get_post_meta($post->ID, 'creator_2', true);
+      $creat2Name =  $creat2['post_title'];
+      if ($creat2Name != '') {
+        echo ', '.$creat2Name;
+      }
+
+      $creat3 = get_post_meta($post->ID, 'creator_3', true);
+      $creat3Name =  $creat3['post_title'];
+      if ($creat3Name != '') {
+        echo ', '.$creat3Name;
+      }
+
+      $creat4 = get_post_meta($post->ID, 'creator_4', true);
+      $creat4Name =  $creat4Name['post_title'];
+      if ($creat4Name != '') {
+        echo ', '.$creat4Name;
+      }
+
+
     } ?>
     </span>
     <div class="">
