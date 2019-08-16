@@ -6,16 +6,8 @@
     $args = array(
         'post_type' => 'output',
         'order'     => 'DESC',
-        'meta_key'   => 'publication_date',
 	      'orderby' => 'meta_value',
-        'meta_query' => array(
-                    array(
-                        'key' => 'output_type',
-                        'value' => $type,
-                        'compare' => '='
-                    )
 
-                ),
     );
     query_posts( $args );
 
