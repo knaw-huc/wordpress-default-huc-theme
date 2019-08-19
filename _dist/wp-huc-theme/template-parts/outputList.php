@@ -61,12 +61,7 @@
       while ( have_posts() ) : the_post();
       ?>
         <li>
-          <?php
-          if ($type == 'archive') {
-            echo '<div class="hcSmallTxt hcTxtColorGreyMid">'.get_post_meta($post->ID, 'output_type', true).'</div>';
-            //print_r(get_post_meta($post->ID, 'output_type', true));
-          }
-           ?>
+
 
           <?php
           if (get_post_meta($post->ID, 'output_type', true) == 'dataset') {
@@ -79,6 +74,12 @@
           //get_template_part( 'template-parts/outputList-dataset' );
 
            ?>
+           <?php
+           if ($type == 'archive') {
+             echo '<div class="hcSmallTxt hcTxtColorGreyMid">'.get_post_meta($post->ID, 'output_type', true).'</div>';
+             //print_r(get_post_meta($post->ID, 'output_type', true));
+           }
+            ?>
         </li>
 
 
