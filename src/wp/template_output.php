@@ -19,6 +19,12 @@ get_header();
 	include( locate_template( 'template-parts/outputList.php', false, false ) );
 	?>
 
+	<?php if ($type != 'archive') { ?>
+	<div class="itemBlock ">
+		<a href="/about/archive/">See the archive</a>
+	</div>
+	<?php } ?>
+
 </main><!-- #primary -->
 
 <?php

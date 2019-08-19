@@ -3,18 +3,47 @@
 
     wp_reset_postdata();
 
+    $typeArr = array(
+        'key' => 'output_type',
+        'value' => $type,
+        'compare' => '='
+    );
+
+    $featureArr = array(
+        'key' => 'featured',
+        'value' => true,
+        'compare' => '='
+    );
+
+    if ( $type == 'archive') {
+                      $typeArr = array(
+                          'key' => 'output_type',
+                          'value' => 'presentation',
+                          'compare' => '='
+                      );
+
+                      $featureArr = array(
+                        'relation' => 'OR',
+                          array(
+                          'key' => 'featured',
+                          'compare' => 'NOT EXISTS'
+                          ), array(
+                          'key' => 'featured',
+                          'value' => 0,
+                          'compare' => '='
+                      ));
+    }
+
     $args = array(
         'post_type' => 'output',
         'order'     => 'DESC',
-        'meta_key'   => 'publication_date',
-	      'orderby' => 'meta_value',
+	      'orderby' => 'order_clause',
         'meta_query' => array(
-                    array(
-                        'key' => 'output_type',
-                        'value' => $type,
-                        'compare' => '='
+                    $typeArr,
+                    $featureArr,
+                    'order_clause' => array(
+                    'key' => 'publication_date'
                     )
-
                 ),
     );
     query_posts( $args );

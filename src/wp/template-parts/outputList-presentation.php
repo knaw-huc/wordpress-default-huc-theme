@@ -13,8 +13,12 @@
 
   </div>
   <span class="hcSmallTxt">
-    Published on <?php
-    echo date("d-m-Y", strtotime(get_post_meta($post->ID, 'publication_date', true))); ?>
+    <?php
+      if (date("d-m-Y", strtotime(get_post_meta($post->ID, 'publication_date', true))) != '01-01-1970') {
+        echo 'Published on '.date("d-m-Y", strtotime(get_post_meta($post->ID, 'publication_date', true)));
+      } 
+
+     ?>
     by
     <?php
     $pod = pods( 'output', get_the_id() );
