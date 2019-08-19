@@ -1,13 +1,5 @@
-<?php
-// function ifNotEmptywww($arr, $pre, $post) {
-//   $output = '';
-//   if ($arr!= '') {
-//     $output = $pre.$arr['post_title'].$post;
-//   }
-//   return $output;
-// }
-?>
 <div class="">
+
   <div>
     <em><?php the_title(); ?></em> <span class="hcTxtColorGreyMid pub_add"><?php echo get_post_meta($post->ID, 'additional_notes', true); ?></span>
 
@@ -16,7 +8,7 @@
     <?php
       if (date("d-m-Y", strtotime(get_post_meta($post->ID, 'publication_date', true))) != '01-01-1970') {
         echo 'Published on '.date("d-m-Y", strtotime(get_post_meta($post->ID, 'publication_date', true)));
-      } 
+      }
 
      ?>
     by
