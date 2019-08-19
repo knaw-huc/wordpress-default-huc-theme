@@ -36,6 +36,7 @@
 
     $args = array(
         'post_type' => 'output',
+        'posts_per_page'   => -1,
         'order'     => 'DESC',
 	      'orderby' => 'order_clause',
         'meta_query' => array(
