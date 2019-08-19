@@ -16,11 +16,7 @@
     );
 
     if ( $type == 'archive') {
-                      $typeArr = array(
-                          'key' => 'output_type',
-                          'value' => 'presentation',
-                          'compare' => '='
-                      );
+                      $typeArr = array();
 
                       $featureArr = array(
                         'relation' => 'OR',
