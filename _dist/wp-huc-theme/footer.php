@@ -33,10 +33,7 @@
     }
 
     if ( get_theme_mod('footerTwitterId') != '' ) {
-      //embed
-      //echo '<div class="twitterTimelineContainer"><a class="twitter-timeline" href="https://twitter.com/'.get_theme_mod('footerTwitterId').'">Tweets by GoldenAgents</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>';
       echo '<div><a href="https://twitter.com/'.get_theme_mod('footerTwitterId').'">Golden Agents on Twitter</a></div>';
-
     }
 
      ?>
