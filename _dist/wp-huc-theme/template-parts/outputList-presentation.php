@@ -38,22 +38,20 @@
         echo ', '.$creat3Name;
       }
 
-echo'1111';
+
       $creat4 = get_post_meta($post->ID, 'creator_4', true);
       //print_ (get_post_meta($post->ID, 'creator_4', false));
       $creat4Name =  $creat4Name['post_title'];
       if ($creat4Name != '') {
         echo ', '.$creat4Name;
-      }else {
-        echo 'leeg';
       }
-echo'2222';
+
       $creat5 = get_post_meta($post->ID, 'creator_5', true);
       $creat5Name =  $creat5Name['post_title'];
       if ($creat5Name != '') {
         echo ', '.$creat5Name;
       }
-echo'3333';
+
 
     } ?>
     </span>
