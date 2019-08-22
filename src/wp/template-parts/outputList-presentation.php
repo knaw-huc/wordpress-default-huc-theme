@@ -70,7 +70,7 @@
                $link_url = get_post_meta($post->ID, 'linktosite', true);
 
                //echo '<a href="'.$link_url.'" target="_blank" >See more...</a>';
-               echo '<More info:'.$link_url.'';
+               echo 'More info:'.$link_url.'';
        }
         ?>
     </div>
