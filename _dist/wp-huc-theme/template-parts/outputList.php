@@ -18,6 +18,8 @@
     if ( $type == 'archive') {
                       $typeArr = array();
 
+                      $featureArr = array();
+
                       // $featureArr = array(
                       //   'relation' => 'OR',
                       //     array(
