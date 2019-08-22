@@ -18,16 +18,16 @@
     if ( $type == 'archive') {
                       $typeArr = array();
 
-                      $featureArr = array(
-                        'relation' => 'OR',
-                          array(
-                          'key' => 'featured',
-                          'compare' => 'NOT EXISTS'
-                          ), array(
-                          'key' => 'featured',
-                          'value' => 0,
-                          'compare' => '='
-                      ));
+                      // $featureArr = array(
+                      //   'relation' => 'OR',
+                      //     array(
+                      //     'key' => 'featured',
+                      //     'compare' => 'NOT EXISTS'
+                      //     ), array(
+                      //     'key' => 'featured',
+                      //     'value' => 0,
+                      //     'compare' => '='
+                      // ));
     }
 
     $args = array(
