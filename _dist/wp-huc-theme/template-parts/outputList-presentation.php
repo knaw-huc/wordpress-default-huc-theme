@@ -61,14 +61,16 @@
               $linkId = get_post_meta($post->ID, 'filelink', false);
               $link_url = wp_get_attachment_url($linkId[0][ID]);
 
-              echo '<a href="'.$link_url.'">Download</a>';
+              //echo '<a href="'.$link_url.'">Download</a>';
+              echo 'Download: '.$link_url.'';
       }
        ?>
        </div><div class="">
        <?php if (get_post_meta($post->ID, 'linktosite', true) !='' ) {
                $link_url = get_post_meta($post->ID, 'linktosite', true);
 
-               echo '<a href="'.$link_url.'" target="_blank" >See more...</a>';
+               //echo '<a href="'.$link_url.'" target="_blank" >See more...</a>';
+               echo '<More info:'.$link_url.'';
        }
         ?>
     </div>
