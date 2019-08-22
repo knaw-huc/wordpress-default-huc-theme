@@ -38,19 +38,20 @@
         echo ', '.$creat3Name;
       }
 
-
       $creat4 = get_post_meta($post->ID, 'creator_4', true);
-      //print_ (get_post_meta($post->ID, 'creator_4', false));
-      $creat4Name =  $creat4Name['post_title'];
+      $creat4Name =  $creat4['post_title'];
       if ($creat4Name != '') {
         echo ', '.$creat4Name;
       }
 
       $creat5 = get_post_meta($post->ID, 'creator_5', true);
-      $creat5Name =  $creat5Name['post_title'];
+      $creat5Name =  $creat5['post_title'];
       if ($creat5Name != '') {
         echo ', '.$creat5Name;
       }
+
+
+
 
 
     } ?>
