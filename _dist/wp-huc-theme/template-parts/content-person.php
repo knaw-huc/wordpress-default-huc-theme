@@ -15,7 +15,7 @@
 			echo infNoteEmpty(get_post_meta($post->ID, 'function_role', true), '', '');
 
 			if (get_post_meta($post->ID, 'link_to_bio_or_linkedin', true) != '') {
-				echo '<a href="'.get_post_meta($post->ID, 'link_to_bio_or_linkedin', true).'" target="_blanc"> (Personal page)</a>';
+				echo '<br><a href="'.get_post_meta($post->ID, 'link_to_bio_or_linkedin', true).'" target="_blanc">Personal page</a>';
 			}
 			?>
 

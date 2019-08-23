@@ -42,33 +42,35 @@
       if ( ! empty( $related ) ) {
         foreach ( $related as $rel ) {
           $id = $rel[ 'ID' ];
-          $authors =$authors.get_the_title( $id ).', ';
+          $authors ='<a href="'.get_permalink( $id ).'">'.$authors.get_the_title( $id ).'</a>, ';
 
         }
         $authors = substr_replace($authors, "", -2);
         echo $authors;
 
         $creat2 = get_post_meta($post->ID, 'creator_2', true);
-        $creat2Name =  $creat2['post_title'];
-        if ($creat2Name != '') {
+        //print_r ($creat2);
+        $creat2Name = '<a href="'.$creat2['guid'].'">'.$creat2['post_title'].'</a>';
+        if ($creat2 != '') {
           echo ', '.$creat2Name;
         }
 
         $creat3 = get_post_meta($post->ID, 'creator_3', true);
-        $creat3Name =  $creat3['post_title'];
-        if ($creat3Name != '') {
+        $creat3Name =  '<a href="'.$creat3['guid'].'">'.$creat3['post_title'].'</a>';
+        if ($creat3 != '') {
           echo ', '.$creat3Name;
         }
 
         $creat4 = get_post_meta($post->ID, 'creator_4', true);
-        $creat4Name =  $creat4['post_title'];
-        if ($creat4Name != '') {
+        $creat4Name =  '<a href="'.$creat4['guid'].'">'.$creat4['post_title'].'</a>';
+        if ($creat4 != '') {
           echo ', '.$creat4Name;
         }
 
         $creat5 = get_post_meta($post->ID, 'creator_5', true);
-        $creat5Name =  $creat5['post_title'];
-        if ($creat5Name != '') {
+        //print_r ($creat5);
+        $creat5Name =  '<a href="'.$creat5['guid'].'">'.$creat5['post_title'].'</a>';
+        if ($creat5 != '') {
           echo ', '.$creat5Name;
         }
 
