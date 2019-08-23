@@ -1,13 +1,15 @@
-    <?php
+ <?php
 
 
     wp_reset_postdata();
 
-    $typeArr = array(
-        'key' => 'output_type',
-        'value' => $type,
+    $creator = array(
+        'key' => 'creators',
+        'value' => $personId,
         'compare' => '='
     );
+
+
 
 
 
@@ -15,13 +17,14 @@
         'post_type' => 'output',
         'posts_per_page'   => -1,
         'order'     => 'DESC',
-	      'orderby' => 'order_clause',
+        'orderby' => 'order_clause',
         'meta_query' => array(
-                    $typeArr,
+                    $creator,
                     'order_clause' => array(
                     'key' => 'publication_date'
                     )
                 ),
+
     );
     query_posts( $args );
 

@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-content">
-		<div class="staffAvatar">
+		<div class="">
 			<?php if ( has_post_thumbnail() ) {
 							the_post_thumbnail( 'thumbnail' );
 						} else {
@@ -9,9 +9,7 @@
 						?>
 		</div>
 		<div class="">
-			<?php
-			echo get_the_title();
-			?>
+			<?php echo get_the_title(); ?>
 			<div class="smallGrey">
 			<?php
 			echo infNoteEmpty(get_post_meta($post->ID, 'function_role', true), '', '');
@@ -32,6 +30,8 @@
 			the_content();
 		?>
 	</div><!-- .entry-content -->
+
+
 
 
 	<div class="entry-content">
