@@ -14,7 +14,7 @@ get_header(); ?>
 		?>
 
 		<div class="entry-content">
-			<h2>Output</h2>
+			<h2>Publications and presentations</h2>
 			<?php
 			//get_template_part( 'template-parts/outputList-perPerson' );
 			include( locate_template( 'template-parts/outputList-perPerson.php', false, false ) );

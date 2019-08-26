@@ -31,23 +31,15 @@
        ?>
       by
       <?php
-      // $pod = pods( 'output', get_the_id() );
-      // $related = $pod->field( 'creators' );
-      //
-      //
-      // if ( ! empty( $related ) ) {
-      //   foreach ( $related as $rel ) {
-      //     $id = $rel[ 'ID' ];
-      //     $authors ='<a href="'.get_permalink( $id ).'">'.$authors.get_the_title( $id ).'</a>, ';
-      //
-      //   }
-      //   $authors = substr_replace($authors, "", -2);
-      //   echo $authors;
-      //   }
 
       $creators = get_post_meta( $post->ID, 'creators', false );
-      echo $creators[0]['post_title'];
-      echo $creators[1]['post_title'];
+      $creatorsOut ='';
+      for ($i=0; $i < count($creators); $i++) {
+        $creatorsOut = $creatorsOut.', <a href="'.$creators[$i]['guid'].'">'.$creators[$i]['post_title'].'</a>';
+      }
+      $creatorsOut2 = substr_replace($creatorsOut, "", 0,2);
+      echo $creatorsOut2;
+
 
 
 
