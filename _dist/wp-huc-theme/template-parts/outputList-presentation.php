@@ -2,10 +2,8 @@
 
   <div>
     <strong><em><?php the_title(); ?></em></strong> <span class="pub_add"><?php echo get_post_meta($post->ID, 'additional_notes', true); ?></span>
-
   </div>
-
-    <div class="hcTxtColorGreyMid">
+  <div class="hcTxtColorGreyMid">
       <?php if (get_post_meta($post->ID, 'filelink', true) !='' ) {
               $linkId = get_post_meta($post->ID, 'filelink', false);
               $link_url = wp_get_attachment_url($linkId[0][ID]);
@@ -24,8 +22,6 @@
        }
         ?>
     </div>
-
-
     <span class="hcSmallTxt">
       <?php
         if (date("d-m-Y", strtotime(get_post_meta($post->ID, 'publication_date', true))) != '01-01-1970') {
@@ -35,18 +31,24 @@
        ?>
       by
       <?php
-      $pod = pods( 'output', get_the_id() );
-      $related = $pod->field( 'creators' );
+      // $pod = pods( 'output', get_the_id() );
+      // $related = $pod->field( 'creators' );
+      //
+      //
+      // if ( ! empty( $related ) ) {
+      //   foreach ( $related as $rel ) {
+      //     $id = $rel[ 'ID' ];
+      //     $authors ='<a href="'.get_permalink( $id ).'">'.$authors.get_the_title( $id ).'</a>, ';
+      //
+      //   }
+      //   $authors = substr_replace($authors, "", -2);
+      //   echo $authors;
+      //   }
 
+      $creators = get_post_meta( $post->ID, 'creators', false );
+      echo $creators[0]['post_title'];
+      echo $creators[1]['post_title'];
 
-      if ( ! empty( $related ) ) {
-        foreach ( $related as $rel ) {
-          $id = $rel[ 'ID' ];
-          $authors ='<a href="'.get_permalink( $id ).'">'.$authors.get_the_title( $id ).'</a>, ';
-
-        }
-        $authors = substr_replace($authors, "", -2);
-        echo $authors;
 
 
         $creat2 = get_post_meta($post->ID, 'creator_2', true);
@@ -74,7 +76,6 @@
           echo ', '.$creat5Name;
         }
 
-      } ?>
+       ?>
       </span>
-
-</div><?php //print_r ($related); ?>
+</div>
