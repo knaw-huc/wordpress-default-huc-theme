@@ -3,11 +3,34 @@
 
     wp_reset_postdata();
 
-    $creator = array(
-        'key' => 'creators',
-        'value' => $personId,
-        'compare' => '='
-    );
+    $creator =     array(
+        		'relation' => 'OR',
+          		array(
+                'key' => 'creators',
+                'value' => $personId,
+                'compare' => '='
+          		),
+          		array(
+                'key' => 'creator_2',
+                'value' => $personId,
+                'compare' => '='
+          		),
+          		array(
+                'key' => 'creator_3',
+                'value' => $personId,
+                'compare' => '='
+          		),
+          		array(
+                'key' => 'creator_4',
+                'value' => $personId,
+                'compare' => '='
+          		),
+          		array(
+                'key' => 'creator_5',
+                'value' => $personId,
+                'compare' => '='
+          		)
+        	);
 
 
 
