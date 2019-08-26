@@ -84,20 +84,17 @@ function infNoteEmpty($field, $pre, $post) {
 
 
 	</div>
-	<div class="subNav">
-
-
 <?php
-	$parentId = wp_get_post_parent_id( $post_ID );
-	if ($parentId ==0) {
-		$parentName = get_the_title();
-	}else {
-		$parentName = get_the_title($parentId);
-	}
-?>
+	if(!is_front_page()) {?>
 
+		<div class="subNav"><?php
+			$parentId = wp_get_post_parent_id( $post_ID );
+			if ($parentId ==0) {
+				$parentName = get_the_title();
+			}else {
+				$parentName = get_the_title($parentId);
+			}
 
-		<?php
 		$args = array(
 		    'menu_id'        => 'primary-menu',
 		    'submenu' => $parentName, //
@@ -106,8 +103,13 @@ function infNoteEmpty($field, $pre, $post) {
 
 		$submenu = wp_nav_menu( $args );
 		echo $submenu; //strip_tags($submenu, "<a>");
-		?>
-	</div>
+		?></div>
+
+<?php } ?>
+
+
+
+
 
 
 

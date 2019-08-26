@@ -48,8 +48,8 @@
         $authors = substr_replace($authors, "", -2);
         echo $authors;
 
+
         $creat2 = get_post_meta($post->ID, 'creator_2', true);
-        //print_r ($creat2);
         $creat2Name = '<a href="'.$creat2['guid'].'">'.$creat2['post_title'].'</a>';
         if ($creat2 != '') {
           echo ', '.$creat2Name;
@@ -77,4 +77,4 @@
       } ?>
       </span>
 
-</div>
+</div><?php //print_r ($related); ?>
