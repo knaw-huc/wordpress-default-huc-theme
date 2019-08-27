@@ -298,8 +298,7 @@ strong {
     width: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    border-right: 1px solid #fff; }
+    background-position: center; }
   .splitScreenRight {
     width: 50%; } }
 
@@ -336,7 +335,9 @@ strong {
 @media (min-width: 600px) {
   .itemDivider {
     display: flex;
-    flex-direction: row; } }
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; } }
 
 .outputList {
   border-top: 1px solid #dfdfdf;
@@ -493,3 +494,7 @@ strong {
 .smallGrey {
   font-size: .9rem;
   color: #6f6f6f; }
+
+.twitterIcon {
+  width: 1rem;
+  height: auto; }

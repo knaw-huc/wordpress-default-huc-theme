@@ -37,7 +37,7 @@
       for ($i=0; $i < count($creators); $i++) {
         $creatorsOut = $creatorsOut.', <a href="'.$creators[$i]['guid'].'">'.$creators[$i]['post_title'].'</a>';
       }
-      $creatorsOut2 = substr_replace($creatorsOut, "", 0,2);
+      $creatorsOut2 = substr_replace($creatorsOut, "", 0,2); 
       echo $creatorsOut2;
 
 

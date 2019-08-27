@@ -141,6 +141,13 @@ gulp.task('copyFiles', function(done) {
   done();
 });
 
+gulp.task('copyImages', function(done) {
+    return gulp.src(fImages)
+        .pipe(gulp.dest(dst+'/images'))
+
+  done();
+});
+
 
 gulp.task('copyFilesWebserver', function(done) {
     return gulp.src(dstCopy)
@@ -153,7 +160,7 @@ gulp.task('copyFilesWebserver', function(done) {
 
 
 gulp.task('build',
-  gulp.series('loadJson', 'clean', 'sass', 'buildFromTemplates', 'copyFiles', 'copyFilesWebserver',
+  gulp.series('loadJson', 'clean', 'sass', 'buildFromTemplates', 'copyImages', 'copyFiles', 'copyFilesWebserver',
   function(done) {
       done();
   }
