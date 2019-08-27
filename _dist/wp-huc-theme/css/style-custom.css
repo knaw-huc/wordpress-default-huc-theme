@@ -314,6 +314,10 @@ strong {
   flex-direction: column;
   align-items: center; }
 
+.homeItemImg img {
+  width: 350px;
+  height: auto; }
+
 .homeItemText, .homeItemImg {
   padding-right: 1rem; }
 
