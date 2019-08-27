@@ -330,7 +330,7 @@ strong {
 .itemDivider {
   display: flex;
   flex-direction: column;
-  max-width: 700px;
+  max-width: 900px;
   margin: 2rem 0; }
 
 @media (min-width: 600px) {
