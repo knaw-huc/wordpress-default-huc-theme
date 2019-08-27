@@ -9,6 +9,18 @@
  * @package Gutenbergtheme
  */
 
+
+
+     $cleanMenu = wp_nav_menu( array(
+       'menu_id'        => 'primary-menu',
+       'echo' => false,
+       'depth'=> 1,
+     ) );
+     //echo $cleanMenu;
+
+
+
+
 ?>
 
 </div><!-- #page -->
@@ -28,9 +40,9 @@
       echo '<div>'.get_theme_mod('footer_block3').'</div>';
     }
 
-    if ( get_theme_mod('footer_block4') != '' ) {
-      echo '<div>'.get_theme_mod('footer_block4').'</div>';
-    }
+    //if ( get_theme_mod('footer_block4') != '' ) {
+      echo '<div class="footernav">'.strip_tags($cleanMenu,"<a>").'</div>';
+    //}
 
     if ( get_theme_mod('footerTwitterId') != '' ) {
       echo '<div><a href="https://twitter.com/'.get_theme_mod('footerTwitterId').'"><img class="twitterIcon" src="'.get_bloginfo( 'template_url' ).'/images/icon-twitter.png">Golden Agents on Twitter</a></div>';
