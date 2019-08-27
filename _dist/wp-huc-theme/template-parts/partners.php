@@ -12,7 +12,7 @@
     if ( have_posts() ) :
 
       ?>
-      <div class="itemBlock hcBasicSideMargin">
+      <div class="itemBlock hcBasicSideMargin"><br>
         <h2 class="hcMarginTop3">Partners</h2>
       </div>
       <div class="partners">
