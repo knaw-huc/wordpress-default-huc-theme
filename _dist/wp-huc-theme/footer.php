@@ -13,7 +13,7 @@
 
 </div><!-- #page -->
 <footer class="footer">
-  <div class="itemBlock hcBasicSideMargin xCols">
+  <div class="hcBasicSideMargin xCols">
 
     <?php
     if ( get_theme_mod('footer_block1') != '' ) {
