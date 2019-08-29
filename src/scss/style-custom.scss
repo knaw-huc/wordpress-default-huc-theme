@@ -35,10 +35,17 @@
   background-color: rgb(187, 218, 233)
 }
 
+
+
 .footer div{
-  width: 900px;
+  width: auto;
 }
 
+@media (min-width: 1000px) {
+  .footer div{
+    width: 900px;
+  }
+}
 
 
 .footer iframe {
