@@ -285,7 +285,7 @@ strong {
   min-height: 66vh; }
 
 .splitScreenContent {
-  max-width: 450px; }
+  max-width: 600px; }
 
 @media (min-width: 800px) {
   .splitScreen {
