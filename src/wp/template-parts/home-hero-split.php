@@ -14,8 +14,8 @@ if ( have_posts() ):
 																			background-blend-mode: <?php echo get_theme_mod('blockRightBlend') ?>;
 																				color: <?php echo get_theme_mod('blockRightTXTcolor', '#111') ?>">
 		<div class="splitScreenContent hcBasicSideMargin">
-			<h1><?php echo the_title(); ?></h1><br>
-					<p><?php the_content(); ?></p>
+			<h1><?php echo the_title(); ?></h1>
+					<?php the_content(); ?>
 		</div>
 	</div>
 </div>
