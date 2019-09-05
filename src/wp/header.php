@@ -27,7 +27,6 @@ function infNoteEmpty($field, $pre, $post) {
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-	<link rel="icon" type="image/png" sizes="96x96" href="<?php bloginfo('template_url'); ?>/images/favicon/favicon-ga.png">
 
 	<?php
 	ob_start();

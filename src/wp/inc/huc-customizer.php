@@ -380,6 +380,28 @@ $wp_customize->add_control( 'ElaborateAproved', array(
 ));
 
 
+// Analytics code
+$wp_customize->add_section( 'analytics' , array(
+    'title'      => 'Analytics code',
+    'priority'   => 80,
+) );
+
+
+// Analytics code
+$wp_customize->add_setting( 'analyticsCode' , array(
+  'default'     => '',
+  'transport'   => 'refresh',
+));
+
+$wp_customize->add_control( 'footer_block1', array(
+  'type'        => 'textarea',
+  'label'       => 'Analytics code',
+  'section'     => 'analytics',
+  'settings'    => 'analyticsCode',
+));
+
+
+
 }
 
 
