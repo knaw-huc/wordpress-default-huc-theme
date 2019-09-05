@@ -43,6 +43,10 @@ function infNoteEmpty($field, $pre, $post) {
 	  border-bottom: 3px solid <?php echo get_theme_mod('brandcolor1') ?>;
 	}
 
+	.current_page_parent a{
+	  border-bottom: 3px solid <?php echo get_theme_mod('brandcolor1') ?>;
+	}
+
 	.footer  {
 		background-color: <?php echo get_theme_mod('footerColorBG') ?>;
 	}
