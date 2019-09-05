@@ -89,7 +89,11 @@ function infNoteEmpty($field, $pre, $post) {
 
 	</div>
 <?php
-	if(!is_front_page()) {?>
+	//if((!is_front_page()) || ( is_page() )) {
+	if( is_page() ) {
+		if( !is_front_page() ) {
+
+		?>
 
 		<div class="subNav"><?php
 			$parentId = wp_get_post_parent_id( $post_ID );
@@ -109,7 +113,7 @@ function infNoteEmpty($field, $pre, $post) {
 		echo $submenu; //strip_tags($submenu, "<a>");
 		?></div>
 
-<?php } ?>
+<?php }} ?>
 
 
 
