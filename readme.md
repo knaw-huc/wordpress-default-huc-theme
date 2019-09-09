@@ -27,7 +27,7 @@ The name of the file should be `copyPath.json` and it contain this json code:
 ## Install in Wordpress
 * Copy the folder `wp-huc-theme` in `_dist` to theme's folder on your Wordpress server.
 * Install the [Pods plugin](https://wordpress.org/plugins/pods/) and activate it.
-* Go to `wp-admin/admin.php?page=pods-components` and enable _migration_.
+* Go to `wp-admin/admin.php?page=pods-components` and enable _Migrate: Packages_.
 * Copy the content of `data/pods.json`
 * Go to `wp-admin/admin.php?page=pods-component-migrate-packages` click import and paste the code.
 
@@ -42,3 +42,7 @@ The name of the file should be `copyPath.json` and it contain this json code:
 * Footer: Type the text for the footer columns. Add a Twitter handle for a Twitter link.
 * Analytics code: Add your Analytics code
 * Use for Huygens eLaborate editions.
+
+## content
+* Import [/extra/data/wp-partners.xml](https://github.com/knaw-huc/wordpress-default-huc-theme/blob/master/extra/data/wp-partners.xml)
+* Upload [partner logos](https://github.com/knaw-huc/wordpress-default-huc-theme/tree/master/extra/images/partners) to your media.
