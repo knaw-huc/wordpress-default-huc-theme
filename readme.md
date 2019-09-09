@@ -1,6 +1,6 @@
-# HuC Wordpress Project themes
+# HuC Wordpress Project theme
 ## Description
-This Wordpress Gutenberg theme provides a basic theme for research project.
+This Wordpress Gutenberg theme provides a basic theme for research project. It handles your team members and publications.
 
 ## Features
 * Hero image with introduction text.
