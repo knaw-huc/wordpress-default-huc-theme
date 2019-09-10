@@ -393,7 +393,7 @@ $wp_customize->add_setting( 'analyticsCode' , array(
   'transport'   => 'refresh',
 ));
 
-$wp_customize->add_control( 'footer_block1', array(
+$wp_customize->add_control( 'analyticsCodeControl', array(
   'type'        => 'textarea',
   'label'       => 'Analytics code',
   'section'     => 'analytics',

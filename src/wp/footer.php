@@ -45,7 +45,7 @@
     //}
 
     if ( get_theme_mod('footerTwitterId') != '' ) {
-      echo '<div><a href="https://twitter.com/'.get_theme_mod('footerTwitterId').'"><img class="twitterIcon" src="'.get_bloginfo( 'template_url' ).'/images/icon-twitter.png">Golden Agents on Twitter</a></div>';
+      echo '<div><a href="https://twitter.com/'.get_theme_mod('footerTwitterId').'"><img class="twitterIcon" src="'.get_bloginfo( 'template_url' ).'/images/icon-twitter.png">'.get_bloginfo( 'name' ).' on Twitter</a></div>';
     }
 
      ?>

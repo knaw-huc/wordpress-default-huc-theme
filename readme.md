@@ -1,6 +1,6 @@
 # HuC Wordpress Project theme
 ## Description
-This Wordpress Gutenberg theme provides a basic theme for research project. It handles your team members and publications.
+This Wordpress Gutenberg theme provides a basic theme for research project. It handles your team members, partners and publications.
 
 ## Features
 * Hero image with introduction text.
@@ -43,6 +43,6 @@ The name of the file should be `copyPath.json` and it contain this json code:
 * Analytics code: Add your Analytics code
 * Use for Huygens eLaborate editions.
 
-## content
+## Content
 * Import [/extra/data/wp-partners.xml](https://github.com/knaw-huc/wordpress-default-huc-theme/blob/master/extra/data/wp-partners.xml)
 * Upload [partner logos](https://github.com/knaw-huc/wordpress-default-huc-theme/tree/master/extra/images/partners) to your media.
