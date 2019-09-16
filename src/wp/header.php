@@ -64,8 +64,7 @@ function infNoteEmpty($field, $pre, $post) {
 
 
 	<div class="header">
-		<div class="headerLeft">&nbsp;</div>
-		<div class="headerMid">
+		<div class="headerLeft">
 			<?php
 			//echo '>'.get_custom_logo().'<';
 			if (get_custom_logo() == '') {
@@ -75,6 +74,7 @@ function infNoteEmpty($field, $pre, $post) {
 			}
 
 			?></div>
+
 		<nav class="headerRight top-navigation">
 			<?php
 				$cleanMenu = wp_nav_menu( array(

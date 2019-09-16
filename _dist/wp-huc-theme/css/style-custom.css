@@ -262,6 +262,8 @@ strong {
     height: auto; }
   .headerLeft, .headerRight {
     width: calc(50% - 100px); }
+  .headerLeft {
+    text-align: left; }
   .top-navigation {
     text-align: right;
     justify-content: flex-end;
