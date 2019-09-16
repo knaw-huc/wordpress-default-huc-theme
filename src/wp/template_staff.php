@@ -1,4 +1,4 @@
-<?php /* Template Name: Staff  */ ?>
+<?php /* Template Name: List all staff  */ ?>
 <?php
 get_header();
 ?>

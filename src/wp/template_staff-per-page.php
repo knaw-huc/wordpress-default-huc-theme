@@ -1,4 +1,4 @@
-<?php /* Template Name: List all staff  */ ?>
+<?php /* Template Name: Selection of staff  */ ?>
 <?php
 get_header();
 ?>
@@ -13,7 +13,7 @@ get_header();
 	endwhile; // End of the loop.
 
 	//get_template_part( 'template-parts/outputList' );
-	include( locate_template( 'template-parts/staffList.php', false, false ) );
+	include( locate_template( 'template-parts/staffList-page.php', false, false ) );
 	?>
 
 </main><!-- #primary -->
