@@ -259,7 +259,8 @@ strong {
     align-items: center; }
   .headerLeft img {
     width: 100px;
-    height: auto; }
+    height: auto;
+    margin-left: 2rem; }
   .headerLeft, .headerRight {
     width: calc(50% - 100px); }
   .headerLeft {
