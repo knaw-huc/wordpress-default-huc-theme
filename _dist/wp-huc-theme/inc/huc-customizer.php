@@ -80,6 +80,7 @@ $wp_customize->add_control( 'blockLeftblend', array(
   'section'     => 'Splitscreen',
   'settings'    => 'blockLeftBlend',
   'choices' => array(
+    'none' => 'none',
     'multiply' => 'multiply',
     'screen' => 'screen'
   )
@@ -137,6 +138,7 @@ $wp_customize->add_control( 'blockRightblend', array(
   'section'     => 'Splitscreen',
   'settings'    => 'blockRightBlend',
   'choices' => array(
+    'none' => 'none',
     'multiply' => 'multiply',
     'screen' => 'screen'
   )
