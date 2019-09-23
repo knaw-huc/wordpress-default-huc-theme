@@ -236,21 +236,21 @@ strong {
   border-bottom: 3px solid; }
 
 .subNav {
-  padding: 1rem;
+  padding: 0rem;
   display: flex;
   width: auto;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   padding-right: 3rem; }
   .subNav a {
     color: #3e3e3e;
-    padding: 1rem;
+    padding: 0rem;
     font-size: .9rem; }
   .subNav li {
     list-style: none; }
   .subNav ul {
     display: flex;
-    flex-direction: row; }
+    flex-direction: column; }
 
 @media (min-width: 800px) {
   .header {
@@ -269,7 +269,14 @@ strong {
   .top-navigation {
     text-align: right;
     justify-content: flex-end;
-    padding-right: 3rem; } }
+    padding-right: 3rem; }
+  .subNav {
+    justify-content: flex-end; }
+    .subNav a {
+      padding: 1rem; }
+    .subNav ul {
+      display: flex;
+      flex-direction: row; } }
 
 .splitScreen {
   width: 100vw;

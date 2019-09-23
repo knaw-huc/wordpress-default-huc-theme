@@ -69,16 +69,16 @@
 
 
 .subNav {
-  padding: 1rem;
+  padding: 0rem;
   display: flex;
   width: auto;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   padding-right: 3rem;
 
   a {
     color: $colorTxt;
-    padding: 1rem;
+    padding: 0rem;
     font-size: .9rem
   }
 
@@ -88,14 +88,12 @@
 
   ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 
 }
 
-@media (min-width: 800px) {
 
-  }
 
 
 
@@ -128,6 +126,22 @@
     justify-content:flex-end;
     padding-right: 3rem;
   }
+
+
+  .subNav {
+    justify-content: flex-end;
+
+    a {
+      padding: 1rem;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+    }
+
+  }
+
 
 
 }
