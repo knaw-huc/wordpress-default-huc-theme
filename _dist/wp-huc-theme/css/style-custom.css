@@ -318,7 +318,7 @@ strong {
   align-items: center; }
 
 .homeItemImg img {
-  width: 350px;
+  width: 300px;
   height: auto; }
 
 .homeItemText, .homeItemImg {
@@ -344,7 +344,14 @@ strong {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center; } }
+    align-items: center; }
+  .homeItemImg img {
+    width: 350px;
+    height: auto; }
+  .homeItemText, .homeItemImg {
+    padding-right: 1rem; }
+  .homeItemText {
+    padding-top: 1rem; } }
 
 .outputList {
   border-top: 1px solid #dfdfdf;
