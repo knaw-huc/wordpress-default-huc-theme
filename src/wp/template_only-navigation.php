@@ -3,4 +3,11 @@
 Template Name: Only navigation
 */
 ?>
-<?php wp_nav_menu( array( 'theme_location' => 'menu-1' ) ); ?>
+<?php
+  $cleanMenu = wp_nav_menu( array(
+    'menu_id'        => 'menu-1',
+    'echo' => false,
+    'depth'=> 1,
+  ) );
+  echo $cleanMenu;
+?>
