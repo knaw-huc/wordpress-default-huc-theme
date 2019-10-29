@@ -14,7 +14,7 @@
     <div class="itemBlock hcBasicSideMargin">
       <h2 class="hcMarginTop3">Blog</h2>
     </div>
-    <div class="itemBlock">
+    <div class="itemBlock hcMarginBottom3">
     <?php
 
     while ( have_posts() ) : the_post();
