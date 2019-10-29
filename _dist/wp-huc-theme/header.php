@@ -68,7 +68,7 @@ function infNoteEmpty($field, $pre, $post) {
 			<?php
 			//echo '>'.get_custom_logo().'<';
 			if (get_custom_logo() == '') {
-			echo '<span class="siteTitle"><a href="'.get_bloginfo( 'url' ).'">'.get_bloginfo( 'name' ).'</a></span>';
+			echo '<span class="siteTitle"><a href="'.get_bloginfo( 'url' ).'">'.get_bloginfo( 'name' ).'</a><br><span class="subTitle">'.get_bloginfo( 'description' ).'</span></span>';
 			} else {
 				echo get_custom_logo();
 			}
