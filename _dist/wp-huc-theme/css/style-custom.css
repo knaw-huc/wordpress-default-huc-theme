@@ -267,14 +267,19 @@ strong {
     width: 100px;
     height: auto;
     margin: 0 0 0 2rem; }
-  .headerLeft, .headerRight {
-    width: calc(50% - 100px); }
   .headerLeft {
     text-align: left; }
+  .headerRight {
+    text-align: right; }
   .top-navigation {
     text-align: right;
     justify-content: flex-end;
-    padding-right: 3rem; }
+    padding-right: 3rem;
+    align-items: flex-end; }
+  .top-navigation .menu {
+    text-align: right;
+    justify-content: flex-end;
+    align-items: flex-end; }
   .subNav {
     justify-content: flex-end; }
     .subNav a {
