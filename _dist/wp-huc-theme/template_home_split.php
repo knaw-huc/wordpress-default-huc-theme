@@ -13,9 +13,6 @@ get_header();
 		get_template_part( 'template-parts/elaborateBar' );
 	}
 
-	get_template_part( 'template-parts/homepage-items' );
-
-
 
 	//news
 	if (get_theme_mod('homeBuild_news', false)) {
@@ -26,6 +23,13 @@ get_header();
 	if (get_theme_mod('homeBuild_blog', false)) {
 		get_template_part( 'template-parts/blogs' );
 	}
+
+
+	get_template_part( 'template-parts/homepage-items' );
+
+
+
+
 
 	//partners
 	if (get_theme_mod('homeBuild_Partners', false)) {
