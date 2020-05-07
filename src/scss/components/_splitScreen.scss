@@ -32,8 +32,16 @@
 
     display: flex;
     flex-direction: row;
-
   }
+
+  #homeSpitBigPost .splitScreen {
+      min-height: 46vh !important;
+    }
+  #homeSpitBigPost .splitScreenRight {
+      min-height: 46vh !important;
+    }
+
+
   .splitScreenLeft {
     display: flex;
     width: 50%;

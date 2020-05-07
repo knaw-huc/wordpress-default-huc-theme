@@ -59,7 +59,7 @@ function infNoteEmpty($field, $pre, $post) {
 
 
 
-<body <?php body_class(); ?>>
+<body>
 
 
 
