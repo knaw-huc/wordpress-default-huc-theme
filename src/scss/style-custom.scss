@@ -153,3 +153,10 @@ $postCardsGutter: 4rem;
     margin-right: 1rem;
   }
 }
+
+.wp-block-quote {
+    border-left: 4px solid #d5e4ef;
+    padding-left: 1rem;
+    font-style: italic;
+    //margin: 0 -2rem;
+  }
