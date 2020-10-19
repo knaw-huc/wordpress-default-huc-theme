@@ -16,6 +16,17 @@
 @import 'components/elaborate';
 @import 'posts';
 
+
+// .site {
+// 	display: flex;
+// 	flex-direction: row;
+// }
+
+// .asideNav {
+//   position: absolute;
+//   max-width: 250px;
+// }
+
 .tag {
   font-style: italic;
 }
@@ -160,3 +171,8 @@ $postCardsGutter: 4rem;
     font-style: italic;
     //margin: 0 -2rem;
   }
+
+
+.newsList .post{
+	border-left: 2px solid #dadada;
+}

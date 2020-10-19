@@ -34,7 +34,7 @@ get_header();
   if ( have_posts() ) :
 
     ?>
-    <div class="itemBlock">
+    <div class="itemBlock newsList">
     <?php
 
     while ( have_posts() ) : the_post();

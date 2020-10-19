@@ -602,3 +602,6 @@ strong {
   border-left: 4px solid #d5e4ef;
   padding-left: 1rem;
   font-style: italic; }
+
+.newsList .post {
+  border-left: 2px solid #dadada; }
