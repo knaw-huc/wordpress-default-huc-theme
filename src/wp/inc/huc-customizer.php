@@ -221,6 +221,19 @@ $wp_customize->add_control('homeBuild_blog2', array(
 
 
 
+//news LATEST item
+$wp_customize->add_setting( 'homeBuild_latest_news' , array(
+  'default'     => false,
+  'transport'   => 'refresh',
+) );
+
+$wp_customize->add_control('homeBuild_latest_news', array(
+  'type'        => 'checkbox',
+  'label'       => 'Show Only latest news item',
+  'section'     => 'cd_homepage_build',
+  'settings'    => 'homeBuild_latest_news',
+));
+
 
 
 // brand color title_tagline
@@ -402,6 +415,32 @@ $wp_customize->add_control( 'analyticsCodeControl', array(
   'settings'    => 'analyticsCode',
 ));
 
+
+
+
+// NAVIGATION
+$wp_customize->add_section( 'subnavigation' , array(
+    'title'      => 'Navigation',
+    'priority'   => 67,
+));
+
+
+// NAVIGATION
+$wp_customize->add_setting( 'subnavigationType' , array(
+  'default'     => 'bar',
+  'transport'   => 'refresh',
+));
+
+$wp_customize->add_control( 'subnavigationTypeControl', array(
+  'type'        => 'radio',
+  'label'       => 'Subnavigation',
+  'choices'     => array(
+    'bar'       => __( 'SubBar' ),
+    'aside'     => __( 'Aside' ),
+  ),
+  'section'     => 'subnavigation',
+  'settings'    => 'subnavigationType',
+));
 
 
 }

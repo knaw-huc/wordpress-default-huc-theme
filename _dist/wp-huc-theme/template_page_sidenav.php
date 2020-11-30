@@ -1,6 +1,6 @@
-<?php
-
-get_header(); ?>
+<?php /* Template Name: page with aside navigation */
+get_header();
+?>
 
 	<main id="primary" class="site-main">
 

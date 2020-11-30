@@ -8,11 +8,21 @@
  */
 
 ?>
+		<main id="post-<?php the_ID(); ?>" >
+			<?php if ( has_post_thumbnail() ) { // featured image ?>
+				<div class="imageHeader" style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>);">
+				</div>
+			<?php } ?>
 
-<article id="post-<?php the_ID(); ?>" >
-	<header class="entry-content">
-		<?php the_title( '<h1>', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+
+		<header class="entry-content">
+			<?php the_title( '<h1>', '</h1>' ); ?>
+		</header><!-- .entry-header -->
+
+
+
+
+
 
 	<div class="entry-content">
 		<?php
@@ -20,4 +30,4 @@
 
 		?>
 	</div><!-- .entry-content -->
-</article><!-- #post-<?php the_ID(); ?> -->
+</main><!-- #post-<?php the_ID(); ?> -->

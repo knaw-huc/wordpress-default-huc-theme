@@ -605,3 +605,10 @@ strong {
 
 .newsList .post {
   border-left: 2px solid #dadada; }
+
+.imageHeader {
+  width: 100%;
+  height: 25vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }

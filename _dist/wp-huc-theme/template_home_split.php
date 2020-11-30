@@ -28,7 +28,10 @@ get_header();
 	get_template_part( 'template-parts/homepage-items' );
 
 
-
+	//news
+	if (get_theme_mod('homeBuild_latest_news', false)) {
+		get_template_part( 'template-parts/posts' );
+	}
 
 
 	//partners

@@ -12,7 +12,7 @@ if ($posttags) {
 <div class="post hcBasicSideMargin">
   <a href="<?php the_permalink(); ?>">
     <strong><?php the_title(); ?></strong><br>
-    <?php echo $tageList ?> <?php echo get_the_date(); ?>
+    <?php the_content(); ?>
 
   </a>
 

@@ -29,7 +29,12 @@ get_header();
 
 
 
-
+	//LATEST news
+	echo "*";
+	if (get_theme_mod('homeBuild_latest_news', false)) {
+		get_template_part( 'template-parts/latest-posts' );
+	}
+	echo "*";
 
 
 
