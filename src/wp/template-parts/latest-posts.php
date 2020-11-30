@@ -26,7 +26,7 @@
 
     ?>
     <div class="itemBlock hcBasicSideMargin">
-      <h2 class="hcMarginTop3">‘Laatste nieuws</h2>
+      <h2 class="hcMarginTop3">Laatste nieuws</h2>
     </div>
     <div class="itemBlock">
     <?php
