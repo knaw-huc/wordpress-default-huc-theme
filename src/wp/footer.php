@@ -41,7 +41,7 @@
     }
 
     //if ( get_theme_mod('footer_block4') != '' ) {
-      echo '<div class="footernav"><a href="/">Home</a>'.strip_tags($cleanMenu,"<a>").'</div>';
+      echo '<div class="footernav">'.strip_tags($cleanMenu,"<a>").'</div>';
     //}
 
     if ( get_theme_mod('footerTwitterId') != '' ) {
