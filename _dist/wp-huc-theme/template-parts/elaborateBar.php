@@ -1,13 +1,16 @@
 
 
+<?php  if ( (get_theme_mod('ElaborateAproved', false)) OR (get_theme_mod('isElaborate', false)) ) { ?>
+
 <div class="bgLightGrey">
   <div class="elaborateBar hcBasicSideMargin">
 
-
+    <?php  if (get_theme_mod('isElaborate', false)) { ?>
     <div class="elaboratePowered">
       <span>Powered by </span>
       <a href="https://www.huygens.knaw.nl/elaborate-an-online-work-environment/" target="_blank" ><img src="<?php echo get_bloginfo( 'template_url' ); ?>/images/logo-elaborate.png"></a>
     </div>
+    <?php } ?>
 
 
 
@@ -23,3 +26,4 @@
 
   </div>
 </div>
+<?php } ?>
