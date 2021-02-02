@@ -427,19 +427,16 @@ $wp_customize->add_section( 'subnavigation' , array(
 
 // NAVIGATION
 $wp_customize->add_setting( 'subnavigationType' , array(
-  'default'     => 'bar',
+  'default'     => false,
   'transport'   => 'refresh',
 ));
 
 $wp_customize->add_control( 'subnavigationTypeControl', array(
-  'type'        => 'radio',
-  'label'       => 'Subnavigation',
-  'choices'     => array(
-    'bar'       => __( 'SubBar' ),
-    'aside'     => __( 'Aside' ),
-  ),
+  'type'        => 'checkbox',
+  'label'       => 'Use aside navigation',
   'section'     => 'subnavigation',
   'settings'    => 'subnavigationType',
+  'description'    => 'Best used for long and nested menus.',
 ));
 
 

@@ -91,6 +91,7 @@ function infNoteEmpty($field, $pre, $post) {
 	</div>
 <?php
 	//if((!is_front_page()) || ( is_page() )) {
+	if (!get_theme_mod('subnavigationType', true)) {
 	if( is_page() ) {
 		if( !is_front_page() ) {
 
@@ -114,7 +115,7 @@ function infNoteEmpty($field, $pre, $post) {
 		echo $submenu; //strip_tags($submenu, "<a>");
 		?></div>
 
-<?php }} ?>
+<?php }}} ?>
 
 
 

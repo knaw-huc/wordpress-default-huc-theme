@@ -184,3 +184,36 @@ $postCardsGutter: 4rem;
   background-repeat: no-repeat;
   background-position: center;
 }
+
+
+.sidebarNav {
+  margin-top: 3rem;
+
+  a {
+    color: $colorTxt;
+    text-decoration: none;
+  }
+
+  .current-menu-item  {
+    li a{
+      border-bottom: 0;
+    }
+  }
+
+  .current_page_parent { 
+    a{
+      text-decoration: none;
+      border-bottom: 0;
+    }
+
+    .current-menu-item  {
+      a{
+        font-weight: 700;
+      }
+    }
+
+  }
+
+
+
+}
