@@ -200,7 +200,7 @@ $postCardsGutter: 4rem;
     }
   }
 
-  .current_page_parent { 
+  .current_page_parent {
     a{
       text-decoration: none;
       border-bottom: 0;
@@ -215,5 +215,17 @@ $postCardsGutter: 4rem;
   }
 
 
+
+}
+
+.entry-content sup{
+  margin: 0;
+  font-size: .8rem;
+  font-weight: 700;
+  vertical-align:middle;
+  //margin-top: -10px;
+  line-height: 0;
+  display: inline-block;
+  margin-top: -5px;
 
 }
