@@ -27,6 +27,22 @@
 //   max-width: 250px;
 // }
 
+.entry-content ul {
+  
+  li{
+    margin-left: 1rem;
+
+    ul li{
+      margin-left: 1rem;
+    }
+    ul li{
+      margin-left: 1rem;
+    }
+  }
+}
+
+
+
 .tag {
   font-style: italic;
 }

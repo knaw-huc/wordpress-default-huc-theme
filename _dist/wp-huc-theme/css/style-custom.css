@@ -208,10 +208,14 @@ strong {
 
 @media (min-width: 1100px) {
   .sidebarNav {
-    width: 250px;
-    position: absolute;
+    width: 300px;
+    position: fixed;
     left: 2rem;
-    top: 150px; } }
+    top: 150px;
+    font-size: .85rem; } }
+
+.wp-caption-text {
+  font-size: .85rem; }
 
 .header {
   display: flex;
@@ -523,6 +527,13 @@ strong {
 .thumbnail {
   width: 100px;
   height: auto; }
+
+.entry-content ul li {
+  margin-left: 1rem; }
+  .entry-content ul li ul li {
+    margin-left: 1rem; }
+  .entry-content ul li ul li {
+    margin-left: 1rem; }
 
 .tag {
   font-style: italic; }

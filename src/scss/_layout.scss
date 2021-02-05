@@ -68,13 +68,17 @@
 
 @media (min-width: 1100px) {
 	.sidebarNav{
-		width: 250px;
-		position: absolute;
+		width: 300px;
+		position: fixed;
 		left: 2rem;
 		top: 150px;
+		font-size: .85rem;
 	}
 }
 
+.wp-caption-text {
+	font-size: .85rem;
+}
 
 // .navDiv{
 // 	display: flex;
