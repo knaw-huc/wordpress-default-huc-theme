@@ -235,6 +235,20 @@ $wp_customize->add_control('homeBuild_latest_news', array(
 ));
 
 
+// Header color
+$wp_customize->add_setting( 'headerColor' , array(
+  'default'     => '#000',
+  'transport'   => 'refresh',
+) );
+
+
+  $wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'headerColor', array(
+  'label'       => 'Header color',
+  'section'     => 'colors',
+  'settings'    => 'headerColor',
+)));
+
+
 
 // brand color title_tagline
 $wp_customize->add_setting( 'brandcolor1' , array(
@@ -248,6 +262,9 @@ $wp_customize->add_setting( 'brandcolor1' , array(
   'section'     => 'colors',
   'settings'    => 'brandcolor1',
 )));
+
+
+
 
 
 
