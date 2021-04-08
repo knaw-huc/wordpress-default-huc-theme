@@ -53,7 +53,7 @@
           <?php
           if (get_post_meta($post->ID, 'output_type', true) == 'dataset1') {//dataset
             get_template_part( 'template-parts/outputList-dataset' );
-          }elseif ( (get_post_meta($post->ID, 'output_type', true) == 'presentation') || (get_post_meta($post->ID, 'output_type', true) == 'publication') || (get_post_meta($post->ID, 'output_type', true) == 'event') || (get_post_meta($post->ID, 'output_type', true) == 'dataset') ) {
+          }elseif ( (get_post_meta($post->ID, 'output_type', true) == 'presentation') || (get_post_meta($post->ID, 'output_type', true) == 'publication') || (get_post_meta($post->ID, 'output_type', true) == 'dataset') || (get_post_meta($post->ID, 'output_type', true) == 'event')  ) {
             get_template_part( 'template-parts/outputList-presentation' );
           }else {
             get_template_part( 'template-parts/outputList-default' );
