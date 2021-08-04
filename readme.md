@@ -46,3 +46,18 @@ The name of the file should be `copyPath.json` and it contain this json code:
 ## Content
 * Import [/extra/data/wp-partners.xml](https://github.com/knaw-huc/wordpress-default-huc-theme/blob/master/extra/data/wp-partners.xml)
 * Upload [partner logos](https://github.com/knaw-huc/wordpress-default-huc-theme/tree/master/extra/images/partners) to your media.
+
+
+## Junicode font
+```
+@font-face {
+ font-family: junicodeFont;
+ src: url(/wp-content/themes/wp-huc-theme/fonts/Junicode.woff);
+}
+
+.junicode {
+ font-family: junicodeFont;
+}
+```
+
+`<span class="junicode">test Junicode</span>`
