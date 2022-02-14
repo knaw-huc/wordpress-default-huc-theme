@@ -5,9 +5,18 @@
 
     $args = array(
         'post_type' => 'person',
+        'orderby'   => 'meta_value_num',
+        'meta_key'  => 'order',
         'order'     => 'ASC',
-        'orderby' => 'name',
-        'showposts' => 100,
+        // 'orderby' => 'name',
+        'showposts' => 100,',
+        meta_query' => array(
+        'relation' => 'OR',
+        array(
+            'key' => 'order', 
+            'compare' => 'NOT EXISTS'
+        )
+    )
 
         //'meta_value' => 'presentation'
     );
