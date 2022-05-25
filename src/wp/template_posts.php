@@ -40,20 +40,25 @@ get_header();
   if ( have_posts() ) :
 
     ?>
-		<div class="itemBlock"> <div class="allTagsLinks">Tags:&nbsp;<?php
+		<?php
 			$tags = get_tags(array('get'=>'all'));
-	    $output .= '';
-	        if($tags) {
-	        foreach ($tags as $tag):
-	        $output .= '<span><a href="'. get_term_link($tag).'">'. $tag->name .'</a></span>';
-	        endforeach;
-	        } else {
-	        _e('No tags created.', 'text-domain');
-	        }
-	    echo $output;
+
+			if (count($tags) > 0) {
+				$output .= '';
+						if($tags) {
+						foreach ($tags as $tag):
+						$output .= '<span><a href="'. get_term_link($tag).'">'. $tag->name .'</a></span>';
+						endforeach;
+						} else {
+						_e('No tags created.', 'text-domain');
+						}
+				echo '<div class="itemBlock"> <div class="allTagsLinks">Tags:&nbsp;';		
+				echo $output;
+				echo '</div></div>';
+			}
 			?>
 
-		</div></div>
+
 
     <div class="itemBlockWide postCards">
     <?php
