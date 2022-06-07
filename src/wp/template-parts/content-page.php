@@ -8,7 +8,7 @@
  */
 
 ?>
-		<main id="post-<?php the_ID(); ?>" >
+		<div id="post-<?php the_ID(); ?>" >
 			<?php if ( has_post_thumbnail() ) { // featured image ?>
 				<div class="imageHeader" style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>);">
 				</div>
@@ -30,4 +30,4 @@
 
 		?>
 	</div><!-- .entry-content -->
-</main><!-- #post-<?php the_ID(); ?> -->
+</div><!-- #post-<?php the_ID(); ?> -->

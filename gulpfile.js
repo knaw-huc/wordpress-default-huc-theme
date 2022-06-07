@@ -4,7 +4,7 @@
 // gulp json
 
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var sass = require('gulp-dart-sass');
 var plumber = require('gulp-plumber');
 var clean = require('gulp-clean');
 var rename = require('gulp-rename');
@@ -69,7 +69,7 @@ gulp.task('loadJson', function(done) {
 gulp.task('browserSync', function(done) {
     browserSync.init({
         //proxy: "http://localhost:8888/wp-default"
-        proxy: "http://localhost:8888/wp-03"
+        proxy: "http://localhost:8888/wp-ga"
 
     });
     done();
