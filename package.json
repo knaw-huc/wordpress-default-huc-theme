@@ -9,7 +9,7 @@
   "author": "Bas Doppen",
   "license": "ISC",
   "dependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.29.1",
     "gulp": "^4.0.0",
     "gulp-compile-handlebars": "^0.6.1",
     "gulp-dart-sass": "^1.0.2",
